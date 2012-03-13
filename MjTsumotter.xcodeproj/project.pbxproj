@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020BC03150DD619001E0725 /* TehaiCameraViewController.m */; };
 		C06C934414AB131100C9D372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934314AB131100C9D372 /* UIKit.framework */; };
 		C06C934614AB131100C9D372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934514AB131100C9D372 /* Foundation.framework */; };
 		C06C934814AB131100C9D372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934714AB131100C9D372 /* CoreGraphics.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C020BC02150DD619001E0725 /* TehaiCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TehaiCameraViewController.h; sourceTree = "<group>"; };
+		C020BC03150DD619001E0725 /* TehaiCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TehaiCameraViewController.m; sourceTree = "<group>"; };
 		C06C933F14AB131100C9D372 /* MjTsumotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MjTsumotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06C934314AB131100C9D372 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C06C934514AB131100C9D372 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +72,7 @@
 		C06C939A14AC1DFF00C9D372 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C06C939C14AC2C3500C9D372 /* AgariDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgariDetailTableViewController.h; sourceTree = "<group>"; };
 		C06C939D14AC2C3500C9D372 /* AgariDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgariDetailTableViewController.m; sourceTree = "<group>"; };
+		C0E9A3E7150F37A500A8AD81 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				C06C934514AB131100C9D372 /* Foundation.framework */,
 				C06C934714AB131100C9D372 /* CoreGraphics.framework */,
 				C06C934914AB131100C9D372 /* CoreData.framework */,
+				C0E9A3E7150F37A500A8AD81 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,6 +172,8 @@
 			children = (
 				C06C938114AB174900C9D372 /* TakePhotoViewContoller.h */,
 				C06C938214AB174900C9D372 /* TakePhotoViewContoller.m */,
+				C020BC02150DD619001E0725 /* TehaiCameraViewController.h */,
+				C020BC03150DD619001E0725 /* TehaiCameraViewController.m */,
 			);
 			name = "Take Photo";
 			sourceTree = "<group>";
@@ -279,6 +286,7 @@
 				C06C939214AB189C00C9D372 /* AgariHistoryTableViewContoller.m in Sources */,
 				C06C939514AB18BE00C9D372 /* ChartAnalyzeTableViewContoller.m in Sources */,
 				C06C939E14AC2C3500C9D372 /* AgariDetailTableViewController.m in Sources */,
+				C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

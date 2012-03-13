@@ -12,7 +12,7 @@
 #define ZERO_VALUE_INT                    0
 #define ZERO_VALUE_FLOAT                  0.0
 
-// Tabbarの高さを定義
+// iPhoneの各種インタフェースの幅、高さを定義
 #define IPHONE_DEVICE_SIZE_WIDTH        320.0
 #define IPHONE_DEVICE_SIZE_HEIGHT       480.0
 #define STATUS_BAR_SIZE_HEIGHT           20.0
@@ -28,6 +28,7 @@
 #define kDateFormatDate                 @"yyyy/MM/dd"
 #define kDateFormatDateTime             @"yyyy/MM/dd HH:mm:ss"
 #define kDateFormatISO8601              @"yyyy-MM-dd'T'HH:mm:ss"
+#define kDateFormatExifDate             @"yyyy:MM:dd HH:mm:ss"
 
 #define ModeDebug
 

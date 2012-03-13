@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
+#import "TehaiCameraViewController.h"
 
-@interface TakePhotoViewContoller : UIViewController <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface TakePhotoViewContoller : UIViewController <UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, TehaiCameraControllerDelegate>
 {
     UIBarButtonItem                 *cameraButton_;
     UIBarButtonItem                 *sendButton_;
     
+    UIImage                         *photo_;
     UILabel                         *photoLabel_;
     UIImageView                     *photoView_;
     UILabel                         *bakazeLabel_;
@@ -21,8 +22,10 @@
     UILabel                         *jikazeLabel_;
     UISegmentedControl              *jikazeSelect_;
     
-    UIImage                         *photo_;
+    TehaiCameraViewController       *_cameraViewCtl;
 }
+
+@property(nonatomic, readonly, retain)  TehaiCameraViewController           *cameraViewCtl;
 
 - (void)takePhoto:(id)sender;
 - (void)sendAgariPhoto:(id)sender;

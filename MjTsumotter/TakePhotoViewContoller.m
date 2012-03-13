@@ -16,13 +16,27 @@ typedef enum{
     MJTSelectPhotoTypeMax
 } MJTSelectPhotoType;
 
+static float        TEHAI_AREA_X                = 100.0;
+static float        TEHAI_AREA_Y                =  13.5;
+static float        TEHAI_AREA_WIDTH            = 120.0;
+static float        TEHAI_AREA_HEIGHT           = 400.0;
+
 @implementation TakePhotoViewContoller
+
+@synthesize cameraViewCtl   = _cameraViewCtl;
 
 - (id)init
 {
     self = [super init];
     if (self != nil) {
         self.title = @"手牌を送る";
+        
+        CGRect tehaiRect                = CGRectMake(TEHAI_AREA_X, 
+                                                     TEHAI_AREA_Y, 
+                                                     TEHAI_AREA_WIDTH, 
+                                                     TEHAI_AREA_HEIGHT);
+        _cameraViewCtl                  = [[TehaiCameraViewController alloc] initWithTehaiArea:tehaiRect];
+        self.cameraViewCtl.delegate     = self;
     }
     return self;
 }
@@ -203,57 +217,15 @@ typedef enum{
         return;
     }
     
-    // イメージピッカーを表示する
-    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.delegate = self;
-    imagePicker.sourceType = sourceType;
-    if (imagePicker.sourceType == UIImagePickerControllerSourceTypeCamera) {
-        UILabel *area           = [[UILabel alloc] initWithFrame:CGRectMake(100.0, 13.5, 120.0, 400.0)];
-        area.backgroundColor    = [UIColor clearColor];
-        area.layer.borderColor  = [UIColor orangeColor].CGColor;
-        area.layer.borderWidth  = 2.0;
-        imagePicker.cameraOverlayView = area;
-        [area release];
+    switch (sourceType) {
+        case UIImagePickerControllerSourceTypeCamera:
+            [self presentModalViewController:self.cameraViewCtl.cameraPicker animated:YES];
+            break;
+        case UIImagePickerControllerSourceTypePhotoLibrary:
+            break;
+        default:
+            break;
     }
-    [self presentModalViewController:imagePicker animated:YES];
-    [imagePicker release];
-}
-
-/**
- * 写真を撮ることに成功した場合
- */
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    // オリジナル画像を取得する
-    UIImage *original = (UIImage *)[info objectForKey:@"UIImagePickerControllerOriginalImage"];
-    NSLog(@"photo  w:%5.1f h:%5.1f", original.size.width, original.size.height);
-    NSLog(@"screen w:%5.1f h:%5.1f", [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
-    
-    // 転送用画像を取得する
-    CGRect rect = CGRectMake( 13.5 * (original.size.width / 427.0), 
-                             100.0 * (original.size.height / 320.0), 
-                             400.0 * (original.size.width / 427.0), 
-                             120.0 * (original.size.height / 320.0));
-    CGImageRef imageRef = CGImageCreateWithImageInRect([original CGImage], rect);
-    UIImage *cropped =[UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);
-    photoView_.image = cropped;
-    
-    // 保存用画像を取得する
-    
-    
-    // イメージピッカーを隠す
-    [self dismissModalViewControllerAnimated:YES];
-}
-
-/**
- * 写真を撮ることがキャンセルされた場合
- */
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    NSLog(@"キャンセルされた");
-    // イメージピッカーを隠す
-    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)takePhoto:(id)sender
@@ -275,13 +247,32 @@ typedef enum{
 {
     [cameraButton_ release];
     [sendButton_ release];
+    [photo_ release];
     [photoView_ release];
     [bakazeLabel_ release];
     [bakazeSelect_ release];
     [jikazeLabel_ release];
     [jikazeSelect_ release];
-    [photo_ release];
+    [_cameraViewCtl release];
     [super dealloc];
+}
+
+#pragma mark - TehaiCameraControllerDelegate
+
+- (void)didFinishTakePhoto:(UIImage *)image at:(NSDate *)date
+{
+    NSLog(@"写真の撮影に成功した");
+    // イメージピッカーを隠す
+    [self dismissModalViewControllerAnimated:YES];
+    
+    NSLog(@"width:%f height:%f date:%@", image.size.width, image.size.height, date);
+}
+
+- (void)didCancelTakePhoto
+{
+    NSLog(@"写真の撮影がキャンセルされた");
+    // イメージピッカーを隠す
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end
