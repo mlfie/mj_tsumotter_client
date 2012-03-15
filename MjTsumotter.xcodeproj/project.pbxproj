@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020BC03150DD619001E0725 /* TehaiCameraViewController.m */; };
-		C05E1F051512596D00751EAA /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F041512596D00751EAA /* Agari.m */; };
 		C05E1F081512596D00751EAA /* Yaku.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F071512596D00751EAA /* Yaku.m */; };
+		C05E1F0E15126D6900751EAA /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F0D15126D6900751EAA /* Agari.m */; };
 		C06C934414AB131100C9D372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934314AB131100C9D372 /* UIKit.framework */; };
 		C06C934614AB131100C9D372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934514AB131100C9D372 /* Foundation.framework */; };
 		C06C934814AB131100C9D372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934714AB131100C9D372 /* CoreGraphics.framework */; };
@@ -44,10 +44,10 @@
 /* Begin PBXFileReference section */
 		C020BC02150DD619001E0725 /* TehaiCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TehaiCameraViewController.h; sourceTree = "<group>"; };
 		C020BC03150DD619001E0725 /* TehaiCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TehaiCameraViewController.m; sourceTree = "<group>"; };
-		C05E1F031512596D00751EAA /* Agari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agari.h; sourceTree = "<group>"; };
-		C05E1F041512596D00751EAA /* Agari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agari.m; sourceTree = "<group>"; };
 		C05E1F061512596D00751EAA /* Yaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaku.h; sourceTree = "<group>"; };
 		C05E1F071512596D00751EAA /* Yaku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yaku.m; sourceTree = "<group>"; };
+		C05E1F0C15126D6900751EAA /* Agari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agari.h; sourceTree = "<group>"; };
+		C05E1F0D15126D6900751EAA /* Agari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agari.m; sourceTree = "<group>"; };
 		C06C933F14AB131100C9D372 /* MjTsumotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MjTsumotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06C934314AB131100C9D372 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C06C934514AB131100C9D372 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,10 +121,10 @@
 		C05E1F021512590500751EAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C05E1F0C15126D6900751EAA /* Agari.h */,
+				C05E1F0D15126D6900751EAA /* Agari.m */,
 				C05E1F061512596D00751EAA /* Yaku.h */,
 				C05E1F071512596D00751EAA /* Yaku.m */,
-				C05E1F031512596D00751EAA /* Agari.h */,
-				C05E1F041512596D00751EAA /* Agari.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -392,8 +392,8 @@
 				C06C939514AB18BE00C9D372 /* ChartAnalyzeTableViewContoller.m in Sources */,
 				C06C939E14AC2C3500C9D372 /* AgariDetailTableViewController.m in Sources */,
 				C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */,
-				C05E1F051512596D00751EAA /* Agari.m in Sources */,
 				C05E1F081512596D00751EAA /* Yaku.m in Sources */,
+				C05E1F0E15126D6900751EAA /* Agari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

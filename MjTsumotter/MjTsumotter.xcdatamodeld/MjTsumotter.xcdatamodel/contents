@@ -3,13 +3,21 @@
     <entity name="Agari" representedClassName="Agari" syncable="YES">
         <attribute name="bakaze" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dora_num" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="honba_num" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="img" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="is_chankan" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="is_chiho" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="is_furo" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="is_haitei" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="is_ippatsu" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="is_parent" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="is_rinshan" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="is_tenho" optional="YES" attributeType="Boolean" defaultValueString="0.0" syncable="YES"/>
         <attribute name="is_tsumo" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="jikaze" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mangan_scale" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="reach_num" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="tehai_list" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="total_fu_num" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="total_han_num" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
@@ -23,7 +31,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Agari" positionX="-90" positionY="-306" width="128" height="255"/>
+        <element name="Agari" positionX="-90" positionY="-306" width="128" height="375"/>
         <element name="Yaku" positionX="162" positionY="-63" width="128" height="105"/>
     </elements>
 </model>

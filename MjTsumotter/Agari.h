@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class Yaku;
 
 @interface Agari : NSManagedObject
 
@@ -25,13 +26,21 @@
 @property (nonatomic) BOOL is_parent;
 @property (nonatomic) BOOL is_furo;
 @property (nonatomic, retain) NSString * tehai_list;
+@property (nonatomic, retain) NSDecimalNumber * dora_num;
+@property (nonatomic, retain) NSDecimalNumber * reach_num;
+@property (nonatomic) BOOL is_ippatsu;
+@property (nonatomic) BOOL is_haitei;
+@property (nonatomic) BOOL is_rinshan;
+@property (nonatomic) BOOL is_chankan;
+@property (nonatomic) BOOL is_tenho;
+@property (nonatomic) BOOL is_chiho;
 @property (nonatomic, retain) NSSet *yaku;
 @end
 
 @interface Agari (CoreDataGeneratedAccessors)
 
-- (void)addYakuObject:(NSManagedObject *)value;
-- (void)removeYakuObject:(NSManagedObject *)value;
+- (void)addYakuObject:(Yaku *)value;
+- (void)removeYakuObject:(Yaku *)value;
 - (void)addYaku:(NSSet *)values;
 - (void)removeYaku:(NSSet *)values;
 

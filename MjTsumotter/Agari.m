@@ -7,6 +7,7 @@
 //
 
 #import "Agari.h"
+#import "Yaku.h"
 
 
 @implementation Agari
@@ -24,6 +25,14 @@
 @dynamic is_parent;
 @dynamic is_furo;
 @dynamic tehai_list;
+@dynamic dora_num;
+@dynamic reach_num;
+@dynamic is_ippatsu;
+@dynamic is_haitei;
+@dynamic is_rinshan;
+@dynamic is_chankan;
+@dynamic is_tenho;
+@dynamic is_chiho;
 @dynamic yaku;
 
 @end
