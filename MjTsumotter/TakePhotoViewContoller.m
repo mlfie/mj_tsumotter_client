@@ -24,6 +24,7 @@ static float        TEHAI_AREA_HEIGHT           = 400.0;
 @implementation TakePhotoViewContoller
 
 @synthesize cameraViewCtl   = _cameraViewCtl;
+@synthesize libraryViewCtl  = _libraryViewCtl;
 
 - (id)init
 {
@@ -190,6 +191,22 @@ static float        TEHAI_AREA_HEIGHT           = 400.0;
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)dealloc
+{
+    [cameraButton_ release];
+    [sendButton_ release];
+    [photo_ release];
+    [photoView_ release];
+    [bakazeLabel_ release];
+    [bakazeSelect_ release];
+    [jikazeLabel_ release];
+    [jikazeSelect_ release];
+    [_cameraViewCtl release];
+    [super dealloc];
+}
+
+#pragma mark - UIActionSheetDelegate
+
 /**
  * アクションシートでボタンが押された場合
  */
@@ -222,39 +239,31 @@ static float        TEHAI_AREA_HEIGHT           = 400.0;
             [self presentModalViewController:self.cameraViewCtl.cameraPicker animated:YES];
             break;
         case UIImagePickerControllerSourceTypePhotoLibrary:
+            _libraryViewCtl                 = [[UIImagePickerController alloc] init];
+            self.libraryViewCtl.sourceType  = sourceType;
+            self.libraryViewCtl.delegate    = self;
+            [self presentModalViewController:self.libraryViewCtl animated:YES];
+            [_libraryViewCtl release];
             break;
         default:
             break;
     }
 }
 
-- (void)takePhoto:(id)sender
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIActionSheet * sheet_ = [[UIActionSheet alloc] initWithTitle:nil 
-                                                         delegate:self 
-                                                cancelButtonTitle:@"キャンセル" 
-                                           destructiveButtonTitle:nil 
-                                                otherButtonTitles:@"写真を撮る", @"ライブラリから選択", nil];
-    [sheet_ showInView:self.tabBarController.view];
-    [sheet_ release];
+    NSLog(@"ライブラリからの画像取得に成功した");
+    // イメージピッカーを隠す
+    [self dismissModalViewControllerAnimated:YES];
 }
 
-- (void)sendAgariPhoto:(id)sender
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-}
-
-- (void)dealloc
-{
-    [cameraButton_ release];
-    [sendButton_ release];
-    [photo_ release];
-    [photoView_ release];
-    [bakazeLabel_ release];
-    [bakazeSelect_ release];
-    [jikazeLabel_ release];
-    [jikazeSelect_ release];
-    [_cameraViewCtl release];
-    [super dealloc];
+    NSLog(@"ライブラリからの画像取得がキャンセルされた");
+    // イメージピッカーを隠す
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark - TehaiCameraControllerDelegate
@@ -273,6 +282,23 @@ static float        TEHAI_AREA_HEIGHT           = 400.0;
     NSLog(@"写真の撮影がキャンセルされた");
     // イメージピッカーを隠す
     [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark - TakePhotoViewController
+
+- (void)takePhoto:(id)sender
+{
+    UIActionSheet * sheet_ = [[UIActionSheet alloc] initWithTitle:nil 
+                                                         delegate:self 
+                                                cancelButtonTitle:@"キャンセル" 
+                                           destructiveButtonTitle:nil 
+                                                otherButtonTitles:@"写真を撮る", @"ライブラリから選択", nil];
+    [sheet_ showInView:self.tabBarController.view];
+    [sheet_ release];
+}
+
+- (void)sendAgariPhoto:(id)sender
+{
 }
 
 @end

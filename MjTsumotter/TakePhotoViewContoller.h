@@ -23,9 +23,11 @@
     UISegmentedControl              *jikazeSelect_;
     
     TehaiCameraViewController       *_cameraViewCtl;
+    UIImagePickerController         *_libraryViewCtl;
 }
 
 @property(nonatomic, readonly, retain)  TehaiCameraViewController           *cameraViewCtl;
+@property(nonatomic, readonly, retain)  UIImagePickerController             *libraryViewCtl;
 
 - (void)takePhoto:(id)sender;
 - (void)sendAgariPhoto:(id)sender;
