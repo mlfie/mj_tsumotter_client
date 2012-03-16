@@ -41,7 +41,8 @@ static NSString     *kImageExifOriginalDateKey  = @"DateTimeOriginal";
     self    = [super init];
     if (self != nil) {
         _tehaiRect                  = rect;
-        [self setupCameraView];
+        // カメラが無いタイプではエラーが発生するため、自己呼び出しはしない。
+//        [self setupCameraView];
     }
     return self;
 }
