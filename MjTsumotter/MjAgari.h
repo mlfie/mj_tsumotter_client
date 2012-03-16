@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DummyAgari : NSObject
+@interface MjAgari : NSObject
 {
     NSData * img;
     NSInteger total_point;

@@ -7,7 +7,7 @@
 //
 
 #import "AgariUnitTest.h"
-#import "DummyAgari.h"
+#import "MjAgari.h"
 #import "SBJson.h"
 
 @implementation AgariUnitTest
@@ -24,7 +24,7 @@
 
 - (void)testToJSON
 {
-    DummyAgari *agari = [[DummyAgari alloc] init];
+    MjAgari *agari = [[MjAgari alloc] init];
     agari.total_point = 1000;
     agari.total_fu_num = 20;
     NSString *json = [agari toJSON];
