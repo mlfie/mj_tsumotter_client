@@ -37,7 +37,6 @@ static float        TEHAI_AREA_HEIGHT           = 400.0;
                                                      TEHAI_AREA_WIDTH, 
                                                      TEHAI_AREA_HEIGHT);
         _cameraViewCtl                  = [[TehaiCameraViewController alloc] initWithTehaiArea:tehaiRect];
-        self.cameraViewCtl.delegate     = self;
     }
     return self;
 }
@@ -236,6 +235,8 @@ static float        TEHAI_AREA_HEIGHT           = 400.0;
     
     switch (sourceType) {
         case UIImagePickerControllerSourceTypeCamera:
+            [self.cameraViewCtl setupCameraView];
+            self.cameraViewCtl.delegate     = self;
             [self presentModalViewController:self.cameraViewCtl.cameraPicker animated:YES];
             break;
         case UIImagePickerControllerSourceTypePhotoLibrary:
