@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Agari.h"
+#import "MjAgari.h"
 
 @interface MjAPIConnection : NSObject
+{
+    id delegate;
+    NSMutableData *receivedData;
+}
 
 - (void)authenticate;
 - (BOOL)isAuthenticated;
-- (void)sendAgari:(Agari *)agari;
+- (void)sendAgari:(MjAgari *)agari delegate:(id)delegate;
 
 @end

@@ -52,6 +52,11 @@
 		340D9BE31512DC7700A904F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934914AB131100C9D372 /* CoreData.framework */; };
 		340D9BE61512E10E00A904F6 /* MjAgari.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BE51512E10E00A904F6 /* MjAgari.m */; };
 		340D9BE71512E40A00A904F6 /* MjAgari.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BE51512E10E00A904F6 /* MjAgari.m */; };
+		340D9BEA1513046000A904F6 /* MjAPIConnectionUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BE91513046000A904F6 /* MjAPIConnectionUnitTest.m */; };
+		340D9BEB1513048B00A904F6 /* MjAPIConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9B981512C49500A904F6 /* MjAPIConnection.m */; };
+		340D9BEF1513158100A904F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BEE1513158100A904F6 /* NSData+Base64.m */; };
+		340D9BF01513158100A904F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BEE1513158100A904F6 /* NSData+Base64.m */; };
+		340D9BF21513181C00A904F6 /* valid_sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 340D9BF11513167D00A904F6 /* valid_sample.jpeg */; };
 		C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020BC03150DD619001E0725 /* TehaiCameraViewController.m */; };
 		C05E1F081512596D00751EAA /* Yaku.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F071512596D00751EAA /* Yaku.m */; };
 		C05E1F0E15126D6900751EAA /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F0D15126D6900751EAA /* Agari.m */; };
@@ -117,8 +122,13 @@
 		340D9BB51512C92400A904F6 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		340D9BC21512CFDC00A904F6 /* AgariUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgariUnitTest.h; sourceTree = "<group>"; };
 		340D9BC31512CFDC00A904F6 /* AgariUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgariUnitTest.m; sourceTree = "<group>"; };
-		340D9BE41512E10D00A904F6 /* MjAgari.h */ = {isa = PBXFileReference; fileEncoding = 4; path = MjAgari.h; sourceTree = "<group>"; };
+		340D9BE41512E10D00A904F6 /* MjAgari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjAgari.h; sourceTree = "<group>"; };
 		340D9BE51512E10E00A904F6 /* MjAgari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjAgari.m; sourceTree = "<group>"; };
+		340D9BE81513046000A904F6 /* MjAPIConnectionUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MjAPIConnectionUnitTest.h; sourceTree = "<group>"; };
+		340D9BE91513046000A904F6 /* MjAPIConnectionUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MjAPIConnectionUnitTest.m; sourceTree = "<group>"; };
+		340D9BED1513158100A904F6 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		340D9BEE1513158100A904F6 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		340D9BF11513167D00A904F6 /* valid_sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = valid_sample.jpeg; sourceTree = "<group>"; };
 		C020BC02150DD619001E0725 /* TehaiCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TehaiCameraViewController.h; sourceTree = "<group>"; };
 		C020BC03150DD619001E0725 /* TehaiCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TehaiCameraViewController.m; sourceTree = "<group>"; };
 		C05E1F061512596D00751EAA /* Yaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaku.h; sourceTree = "<group>"; };
@@ -210,6 +220,7 @@
 		340D9B9A1512C90800A904F6 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				340D9BEC1513156200A904F6 /* NSData_Base64 */,
 				340D9B9B1512C92400A904F6 /* SBJson */,
 			);
 			name = Externals;
@@ -247,6 +258,15 @@
 			);
 			name = SBJson;
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		340D9BEC1513156200A904F6 /* NSData_Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				340D9BED1513158100A904F6 /* NSData+Base64.h */,
+				340D9BEE1513158100A904F6 /* NSData+Base64.m */,
+			);
+			name = NSData_Base64;
 			sourceTree = "<group>";
 		};
 		C05E1F021512590500751EAA /* Model */ = {
@@ -389,6 +409,8 @@
 				C0E9A41C150F587C00A8AD81 /* Supporting Files */,
 				340D9BC21512CFDC00A904F6 /* AgariUnitTest.h */,
 				340D9BC31512CFDC00A904F6 /* AgariUnitTest.m */,
+				340D9BE81513046000A904F6 /* MjAPIConnectionUnitTest.h */,
+				340D9BE91513046000A904F6 /* MjAPIConnectionUnitTest.m */,
 			);
 			path = MjTsumotterUnitTest;
 			sourceTree = "<group>";
@@ -396,6 +418,7 @@
 		C0E9A41C150F587C00A8AD81 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				340D9BF11513167D00A904F6 /* valid_sample.jpeg */,
 				C0E9A41D150F587C00A8AD81 /* MjTsumotterUnitTest-Info.plist */,
 				C0E9A41E150F587C00A8AD81 /* InfoPlist.strings */,
 				C0E9A424150F587C00A8AD81 /* MjTsumotterUnitTest-Prefix.pch */,
@@ -490,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340D9BF21513181C00A904F6 /* valid_sample.jpeg in Resources */,
 				C0E9A420150F587C00A8AD81 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +567,7 @@
 				340D9BC01512C92400A904F6 /* SBJsonUTF8Stream.m in Sources */,
 				340D9BC11512C92400A904F6 /* SBJsonWriter.m in Sources */,
 				340D9BE61512E10E00A904F6 /* MjAgari.m in Sources */,
+				340D9BEF1513158100A904F6 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				340D9BEB1513048B00A904F6 /* MjAPIConnection.m in Sources */,
 				340D9BE71512E40A00A904F6 /* MjAgari.m in Sources */,
 				340D9BC91512DA6600A904F6 /* JSON.h in Sources */,
 				340D9BCA1512DA6600A904F6 /* NSObject+SBJson.h in Sources */,
@@ -581,6 +607,8 @@
 				340D9BC71512D4A100A904F6 /* Agari.m in Sources */,
 				C0E9A423150F587C00A8AD81 /* MjTsumotterUnitTest.m in Sources */,
 				340D9BC41512CFDC00A904F6 /* AgariUnitTest.m in Sources */,
+				340D9BEA1513046000A904F6 /* MjAPIConnectionUnitTest.m in Sources */,
+				340D9BF01513158100A904F6 /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

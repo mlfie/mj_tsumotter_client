@@ -7,6 +7,7 @@
 //
 
 #import "MjAgari.h"
+#import "NSData+Base64.h"
 
 @implementation MjAgari
 
@@ -17,9 +18,9 @@
 - (NSMutableDictionary *)getSerializableDictionary
 {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    //    [dictionary setObject:@"img" forKey:self.img];
-    [dictionary setObject:[NSNumber numberWithInt:self.total_point] forKey:@"total_point"];
-    [dictionary setObject:[NSNumber numberWithInt:self.total_fu_num] forKey:@"total_fu_num"];
+    [dictionary setObject:[self.img base64EncodedString] forKey:@"img"];
+//    [dictionary setObject:[NSNumber numberWithInt:self.total_point] forKey:@"total_point"];
+//    [dictionary setObject:[NSNumber numberWithInt:self.total_fu_num] forKey:@"total_fu_num"];
     
     return dictionary;
 }
