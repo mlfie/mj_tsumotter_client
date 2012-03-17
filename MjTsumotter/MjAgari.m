@@ -11,23 +11,74 @@
 
 @implementation MjAgari
 
-@synthesize total_point, total_han_num, total_fu_num, tehai_list, img, bakaze, jikaze, is_furo, dora_num,
-            is_chiho, is_tenho, is_tsumo, honba_num, is_haitei, is_parent, reach_num, is_chankan, is_ippatsu,
-            is_rinshan, mangan_scale;
+@synthesize img, bakaze, jikaze, dora_num, honba_num, reach_num, 
+           is_tsumo, is_ippatsu, is_haitei, is_rinshan, is_chankan, is_tenho, is_chiho, is_parent,
+           total_fu_num, total_han_num, child_point, parent_point, ron_point, total_point, mangan_scale,
+           is_furo, tehai_list, yaku_list;
 
-- (NSMutableDictionary *)getSerializableDictionary
+- (id)init
 {
-    NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    [dictionary setObject:[self.img base64EncodedString] forKey:@"img"];
-//    [dictionary setObject:[NSNumber numberWithInt:self.total_point] forKey:@"total_point"];
-//    [dictionary setObject:[NSNumber numberWithInt:self.total_fu_num] forKey:@"total_fu_num"];
-    
+    self = [super init];
+    if(self) {
+        self.img = nil;
+        self.bakaze = nil;
+        self.jikaze = nil;
+        self.honba_num = 0;
+        self.dora_num = 0;
+        self.reach_num = 0;
+        self.is_tsumo = NO;
+        self.is_ippatsu = NO;
+        self.is_haitei = NO;
+        self.is_rinshan = NO;
+        self.is_chankan = NO;
+        self.is_tenho = NO;
+        self.is_chiho = NO;
+        self.is_parent = NO;
+        self.total_fu_num = 0;
+        self.total_han_num = 0;
+        self.child_point = 0;
+        self.parent_point = 0;
+        self.ron_point = 0;
+        self.total_point = 0;
+        self.mangan_scale = 0;
+        self.is_furo = NO;
+        self.tehai_list = nil;
+        self.yaku_list = nil;
+    }
+    return self;
+}
+
+- (NSDictionary *)getSerializableDictionary
+{
+    NSMutableDictionary *agari = [NSMutableDictionary dictionary];
+    if(self.img) {
+        [agari setObject:[self.img base64EncodedString] forKey:@"img"];
+    }
+    if(self.bakaze) {
+        [agari setObject:self.bakaze forKey:@"bakaze"];
+    }
+    if(self.jikaze) {
+        [agari setObject:self.jikaze forKey:@"jikaze"];
+    }
+    [agari setObject:[NSNumber numberWithInt:self.honba_num] forKey:@"honba_num"];
+    [agari setObject:[NSNumber numberWithInt:self.dora_num] forKey:@"dora_num"];
+    [agari setObject:[NSNumber numberWithInt:self.reach_num] forKey:@"reach_num"];
+    [agari setObject:[NSNumber numberWithBool:self.is_tsumo] forKey:@"is_tsumo"];
+    [agari setObject:[NSNumber numberWithBool:self.is_ippatsu] forKey:@"is_ippatsu"];
+    [agari setObject:[NSNumber numberWithBool:self.is_haitei] forKey:@"is_haitei"];
+    [agari setObject:[NSNumber numberWithBool:self.is_rinshan] forKey:@"is_rinshan"];
+    [agari setObject:[NSNumber numberWithBool:self.is_chankan] forKey:@"is_chankan"];
+    [agari setObject:[NSNumber numberWithBool:self.is_tenho] forKey:@"is_tenho"];
+    [agari setObject:[NSNumber numberWithBool:self.is_chiho] forKey:@"is_chiho"];
+    [agari setObject:[NSNumber numberWithBool:self.is_parent] forKey:@"is_parent"];
+        
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:agari forKey:@"agari"];
     return dictionary;
 }
 
 - (NSString *)toJSON
 {
-    NSMutableDictionary *d = [[self getSerializableDictionary] retain];
+    NSDictionary *d = [[self getSerializableDictionary] retain];
     NSString *json = [d JSONRepresentation];
     [d release];
     

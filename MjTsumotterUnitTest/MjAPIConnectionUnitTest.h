@@ -7,9 +7,11 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "MjAgari.h"
 
 @interface MjAPIConnectionUnitTest : SenTestCase
 {
+    MjAgari *agari;
 }
 
 @end
