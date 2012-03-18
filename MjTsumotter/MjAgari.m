@@ -85,4 +85,27 @@
     return json;
 }
 
+- (BOOL)fromJSON:(NSString *)json
+{
+    NSDictionary *dictionary = [json JSONValue];
+    if (!dictionary) { return NO; }
+    
+    NSDictionary *agari = [dictionary objectForKey:@"agari"];
+    if (!agari) { return NO; }
+
+    @try {
+        NSEnumerator *enumerator = [agari keyEnumerator];
+        id key;
+        while (key = [enumerator nextObject]) {
+            [self setValue:[agari objectForKey:key] forKey:key];
+        }        
+    }
+    @catch (NSException *exception) {
+        NSLog(@"MjAgari#fromJSON catch Exception %@", exception.description);
+        return NO;
+    }
+    
+    return YES;
+}
+
 @end

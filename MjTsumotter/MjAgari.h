@@ -65,5 +65,6 @@
 
 
 - (NSString *)toJSON;
+- (BOOL)fromJSON:(NSString *)json;
 
 @end

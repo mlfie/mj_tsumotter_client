@@ -77,6 +77,41 @@
     NSLog(@"json = %@", json);
 }
 
+- (void)test_MjAgari_fromJSON
+{
+    NSString *json = @"{ \
+    \"agari\":{ \
+      \"total_fu_num\":20, \
+      \"is_furo\":true, \
+      \"mangan_scale\":1.5, \
+      \"tehai_list\":\"m1t\", \
+      \"yaku_list\":[ \
+        {\"name\":\"pinfu\", \
+        \"han_num\":1, \
+        \"naki_han_num\":0} \
+    ]}}";
+    
+    STAssertTrue([agari fromJSON:json], @"fromJSON should return true when passing valid json string");
+    
+    STAssertEquals(agari.total_fu_num, 20, @"fromJSON should assign integer value");
+    STAssertTrue(agari.is_furo, @"fromJSON should assign boolean value");
+    STAssertEquals(agari.mangan_scale, 1.5F, @"fromJSON should assign float value");
+    STAssertEqualObjects(agari.tehai_list, @"m1t", @"fromJSON should assign string value");
+
+    NSMutableDictionary *yaku = [NSMutableDictionary dictionary];
+    [yaku setValue:@"pinfu" forKey:@"name"];
+    [yaku setValue:[NSNumber numberWithInt:1] forKey:@"han_num"];
+    [yaku setValue:[NSNumber numberWithInt:0] forKey:@"naki_han_num"];
+    NSArray *yaku_list = [NSArray arrayWithObject:yaku];
+    STAssertEqualObjects(agari.yaku_list, yaku_list, @"fromJSON should assign dictionary value");
+    
+    NSString *invalid = @"invalid";
+    STAssertFalse([agari fromJSON:invalid], @"fromJSON should return false when passing invalid json string");
+    
+    NSString *undefined_key = @"{\"agari\":{\"undefined\":0}}";
+    STAssertFalse([agari fromJSON:undefined_key], @"fromJSON should return false when passing undefined key");
+}
+
 - (void)test_init
 {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
