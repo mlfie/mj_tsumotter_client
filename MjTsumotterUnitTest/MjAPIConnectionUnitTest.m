@@ -10,16 +10,22 @@
 #import "MjAPIConnection.h"
 
 @implementation MjAPIConnectionUnitTest
+{
+    BOOL isRun;
+}
 
 - (void)setUp
 {
     [super setUp];
+    isRun = NO;
     agari = [[MjAgari alloc] init];
 }
 
 - (void)tearDown
 {
     [agari release];
+    while (isRun) {}
+    
     [super tearDown];
 }
 
@@ -112,7 +118,7 @@
     STAssertFalse([agari fromJSON:undefined_key], @"fromJSON should return false when passing undefined key");
 }
 
-- (void)test_init
+- (void)test_sendAgari
 {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSString *imagePath = [bundle pathForResource:@"valid_sample" 
@@ -120,11 +126,15 @@
     UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
     NSData *imgData = UIImageJPEGRepresentation(image, 1.0);
     
-    MjAgari * agari = [[MjAgari alloc] init];
     agari.img = imgData;
     
+    isRun = YES;
+    
     MjAPIConnection *con = [[MjAPIConnection alloc] init];
-    [con sendAgari:agari delegate:nil];
+    [con sendAgari:agari withHandler:^(NSHTTPURLResponse *responseHeader, NSString *responseString, NSError *error) {
+        NSLog(@"response = %@", responseString);
+        isRun = NO;
+    }];
 }
 
 @end

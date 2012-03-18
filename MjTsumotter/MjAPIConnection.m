@@ -7,76 +7,50 @@
 //
 
 #import "MjAPIConnection.h"
+#import "R9HTTPRequest.h"
 
 static NSString *MjAPI_URI = @"http://mjt.mjlife.jp/agaris.json";
 
 @implementation MjAPIConnection
-
-- (id)init
 {
-    self = [super init];
-    if (self) {
-        receivedData = [[NSMutableData alloc] init];
-    }
-    
-    return self;
+    RequestDidCompleteHandler m_handler;
 }
 
 - (void)dealloc
 {
-    [receivedData release];
+    if(m_handler) {
+        Block_release(m_handler);
+    }
+    
     [super dealloc];
 }
 
 
-- (void)sendAgari:(MjAgari *)agari delegate:(id)delegate
+- (void)sendAgari:(MjAgari *)agari withHandler:(RequestDidCompleteHandler)handler
 {
-    NSURLRequest *req = [self createRequestAgari:agari];
-    
-    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:req delegate:self];
-    if (connection) {
-        receivedData = [[NSMutableData data] retain];
-    } else {
-//        [delegate didFailWithError];
-    }
+    m_handler = Block_copy(handler);
+    R9HTTPRequest *req = [self createRequestAgari:agari];
+    [req startRequest];
 }
 
-- (NSURLRequest *)createRequestAgari:(MjAgari *)agari
+- (R9HTTPRequest *)createRequestAgari:(MjAgari *)agari
 {
-    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:MjAPI_URI] cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:60];
+    R9HTTPRequest *req = [[R9HTTPRequest alloc] initWithURL:[NSURL URLWithString:MjAPI_URI]];
     [req setHTTPMethod:@"POST"];
-    [req setHTTPBody:[[agari toJSON] dataUsingEncoding:NSUTF8StringEncoding]];
+    [req addHeader:@"application/json" forKey:@"Content-Type"];    
+    [req setBody:[[agari toJSON] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [req setCompletionHandler:^(NSHTTPURLResponse *responseHeader, NSString *responseString) {
+        NSLog(@"response = %@", responseString);
+        m_handler(responseHeader, responseString, nil);
+    }];
+    
+    [req setFailedHandler:^(NSError *error){
+        NSLog(@"error = %@", error.description);
+        m_handler(nil, nil, error);
+    }];
+    
     return req;
-}
-
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    [receivedData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    //reset previously received data
-    [receivedData setLength:0];
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-    NSLog(@"MjAPIConnection#connection:didFailWithError %@", error.description);
-    
-    [connection release];
-    [receivedData release];
-    
-    //[delegate didFailWithError:error];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection
-{
-    NSLog(@"receivedData = %@", receivedData);
-    
-    [connection release];
-    [receivedData release];
 }
 
 @end

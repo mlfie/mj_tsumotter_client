@@ -57,6 +57,8 @@
 		340D9BEF1513158100A904F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BEE1513158100A904F6 /* NSData+Base64.m */; };
 		340D9BF01513158100A904F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BEE1513158100A904F6 /* NSData+Base64.m */; };
 		340D9BF21513181C00A904F6 /* valid_sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 340D9BF11513167D00A904F6 /* valid_sample.jpeg */; };
+		34C2A28715160E390024C809 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C2A28615160E390024C809 /* R9HTTPRequest.m */; };
+		34C2A28815160E390024C809 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C2A28615160E390024C809 /* R9HTTPRequest.m */; };
 		C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020BC03150DD619001E0725 /* TehaiCameraViewController.m */; };
 		C05E1F081512596D00751EAA /* Yaku.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F071512596D00751EAA /* Yaku.m */; };
 		C05E1F0E15126D6900751EAA /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F0D15126D6900751EAA /* Agari.m */; };
@@ -129,6 +131,8 @@
 		340D9BED1513158100A904F6 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
 		340D9BEE1513158100A904F6 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		340D9BF11513167D00A904F6 /* valid_sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = valid_sample.jpeg; sourceTree = "<group>"; };
+		34C2A28515160E390024C809 /* R9HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R9HTTPRequest.h; sourceTree = "<group>"; };
+		34C2A28615160E390024C809 /* R9HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R9HTTPRequest.m; sourceTree = "<group>"; };
 		C020BC02150DD619001E0725 /* TehaiCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TehaiCameraViewController.h; sourceTree = "<group>"; };
 		C020BC03150DD619001E0725 /* TehaiCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TehaiCameraViewController.m; sourceTree = "<group>"; };
 		C05E1F061512596D00751EAA /* Yaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaku.h; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 		340D9B9A1512C90800A904F6 /* Externals */ = {
 			isa = PBXGroup;
 			children = (
+				34C2A28315160E1C0024C809 /* R9HTTPRequest */,
 				340D9BEC1513156200A904F6 /* NSData_Base64 */,
 				340D9B9B1512C92400A904F6 /* SBJson */,
 			);
@@ -267,6 +272,15 @@
 				340D9BEE1513158100A904F6 /* NSData+Base64.m */,
 			);
 			name = NSData_Base64;
+			sourceTree = "<group>";
+		};
+		34C2A28315160E1C0024C809 /* R9HTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				34C2A28515160E390024C809 /* R9HTTPRequest.h */,
+				34C2A28615160E390024C809 /* R9HTTPRequest.m */,
+			);
+			name = R9HTTPRequest;
 			sourceTree = "<group>";
 		};
 		C05E1F021512590500751EAA /* Model */ = {
@@ -568,6 +582,7 @@
 				340D9BC11512C92400A904F6 /* SBJsonWriter.m in Sources */,
 				340D9BE61512E10E00A904F6 /* MjAgari.m in Sources */,
 				340D9BEF1513158100A904F6 /* NSData+Base64.m in Sources */,
+				34C2A28715160E390024C809 /* R9HTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -609,6 +624,7 @@
 				340D9BC41512CFDC00A904F6 /* AgariUnitTest.m in Sources */,
 				340D9BEA1513046000A904F6 /* MjAPIConnectionUnitTest.m in Sources */,
 				340D9BF01513158100A904F6 /* NSData+Base64.m in Sources */,
+				34C2A28815160E390024C809 /* R9HTTPRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

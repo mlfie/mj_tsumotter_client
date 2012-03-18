@@ -8,6 +8,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "MjAgari.h"
+#import "MjAPIConnection.h"
 
 @interface MjAPIConnectionUnitTest : SenTestCase
 {

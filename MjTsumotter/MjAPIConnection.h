@@ -9,14 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "MjAgari.h"
 
+typedef void(^RequestDidCompleteHandler)(NSHTTPURLResponse *responseHeader, NSString *responseString, NSError *error);
+
 @interface MjAPIConnection : NSObject
-{
-    id delegate;
-    NSMutableData *receivedData;
-}
 
 - (void)authenticate;
 - (BOOL)isAuthenticated;
-- (void)sendAgari:(MjAgari *)agari delegate:(id)delegate;
+- (void)sendAgari:(MjAgari *)agari withHandler:(RequestDidCompleteHandler)handler;
 
 @end
