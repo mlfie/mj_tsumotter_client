@@ -34,7 +34,7 @@
     Float32 mangan_scale;
     BOOL is_furo;
     NSString * tehai_list;
-    NSDictionary *yaku_list;
+    NSArray *yaku_list;
 }
 
 @property (nonatomic, retain) NSData * img;
@@ -61,7 +61,7 @@
 @property Float32 mangan_scale;
 @property (nonatomic) BOOL is_furo;
 @property (nonatomic, retain) NSString *tehai_list;
-@property (nonatomic, retain) NSDictionary *yaku_list;
+@property (nonatomic, retain) NSArray *yaku_list;
 
 
 - (NSString *)toJSON;
