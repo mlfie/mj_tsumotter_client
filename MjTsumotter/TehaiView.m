@@ -23,6 +23,7 @@
         tehaiImages = [[NSMutableArray array] retain];
         tehaiString = @"";
     }
+    [self setBackgroundColor:[UIColor clearColor]];
     return self;
 }
 
@@ -75,7 +76,9 @@
         UIImage *img = [self.tehaiImages objectAtIndex:i];
         CGRect imgRect;
         imgRect.size = img.size;
-        imgRect.origin.x = i * img.size.width;
+        imgRect.size.width = imgRect.size.width * 0.9;
+        imgRect.size.height = imgRect.size.height * 0.9;
+        imgRect.origin.x = i * imgRect.size.width;
         
         [img drawInRect:imgRect];
     }
