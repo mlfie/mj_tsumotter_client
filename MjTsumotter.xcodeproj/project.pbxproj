@@ -21,7 +21,6 @@
 		340D9BC01512C92400A904F6 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BB31512C92400A904F6 /* SBJsonUTF8Stream.m */; };
 		340D9BC11512C92400A904F6 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BB51512C92400A904F6 /* SBJsonWriter.m */; };
 		340D9BC41512CFDC00A904F6 /* AgariUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BC31512CFDC00A904F6 /* AgariUnitTest.m */; };
-		340D9BC71512D4A100A904F6 /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F0D15126D6900751EAA /* Agari.m */; };
 		340D9BC81512D4EE00A904F6 /* Yaku.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F071512596D00751EAA /* Yaku.m */; };
 		340D9BC91512DA6600A904F6 /* JSON.h in Sources */ = {isa = PBXBuildFile; fileRef = 340D9B9C1512C92400A904F6 /* JSON.h */; };
 		340D9BCA1512DA6600A904F6 /* NSObject+SBJson.h in Sources */ = {isa = PBXBuildFile; fileRef = 340D9B9D1512C92400A904F6 /* NSObject+SBJson.h */; };
@@ -61,7 +60,6 @@
 		34C2A28815160E390024C809 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C2A28615160E390024C809 /* R9HTTPRequest.m */; };
 		C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020BC03150DD619001E0725 /* TehaiCameraViewController.m */; };
 		C05E1F081512596D00751EAA /* Yaku.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F071512596D00751EAA /* Yaku.m */; };
-		C05E1F0E15126D6900751EAA /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C05E1F0D15126D6900751EAA /* Agari.m */; };
 		C06C934414AB131100C9D372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934314AB131100C9D372 /* UIKit.framework */; };
 		C06C934614AB131100C9D372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934514AB131100C9D372 /* Foundation.framework */; };
 		C06C934814AB131100C9D372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934714AB131100C9D372 /* CoreGraphics.framework */; };
@@ -86,6 +84,7 @@
 		C06C939514AB18BE00C9D372 /* ChartAnalyzeTableViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = C06C939414AB18BD00C9D372 /* ChartAnalyzeTableViewContoller.m */; };
 		C06C939B14AC1E0000C9D372 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C939A14AC1DFF00C9D372 /* QuartzCore.framework */; };
 		C06C939E14AC2C3500C9D372 /* AgariDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C06C939D14AC2C3500C9D372 /* AgariDetailTableViewController.m */; };
+		C084AAF4151741A3006EFBB1 /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C084AAF3151741A3006EFBB1 /* Agari.m */; };
 		C0E9A418150F587C00A8AD81 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E9A40F150F520700A8AD81 /* SenTestingKit.framework */; };
 		C0E9A419150F587C00A8AD81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934314AB131100C9D372 /* UIKit.framework */; };
 		C0E9A41A150F587C00A8AD81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934514AB131100C9D372 /* Foundation.framework */; };
@@ -137,8 +136,6 @@
 		C020BC03150DD619001E0725 /* TehaiCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TehaiCameraViewController.m; sourceTree = "<group>"; };
 		C05E1F061512596D00751EAA /* Yaku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Yaku.h; sourceTree = "<group>"; };
 		C05E1F071512596D00751EAA /* Yaku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Yaku.m; sourceTree = "<group>"; };
-		C05E1F0C15126D6900751EAA /* Agari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agari.h; sourceTree = "<group>"; };
-		C05E1F0D15126D6900751EAA /* Agari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agari.m; sourceTree = "<group>"; };
 		C06C933F14AB131100C9D372 /* MjTsumotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MjTsumotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C06C934314AB131100C9D372 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C06C934514AB131100C9D372 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -174,6 +171,8 @@
 		C06C939A14AC1DFF00C9D372 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C06C939C14AC2C3500C9D372 /* AgariDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgariDetailTableViewController.h; sourceTree = "<group>"; };
 		C06C939D14AC2C3500C9D372 /* AgariDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgariDetailTableViewController.m; sourceTree = "<group>"; };
+		C084AAF2151741A3006EFBB1 /* Agari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agari.h; sourceTree = "<group>"; };
+		C084AAF3151741A3006EFBB1 /* Agari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agari.m; sourceTree = "<group>"; };
 		C0E9A40F150F520700A8AD81 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C0E9A417150F587C00A8AD81 /* MjTsumotterUnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MjTsumotterUnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E9A41D150F587C00A8AD81 /* MjTsumotterUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MjTsumotterUnitTest-Info.plist"; sourceTree = "<group>"; };
@@ -286,8 +285,8 @@
 		C05E1F021512590500751EAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C05E1F0C15126D6900751EAA /* Agari.h */,
-				C05E1F0D15126D6900751EAA /* Agari.m */,
+				C084AAF2151741A3006EFBB1 /* Agari.h */,
+				C084AAF3151741A3006EFBB1 /* Agari.m */,
 				C05E1F061512596D00751EAA /* Yaku.h */,
 				C05E1F071512596D00751EAA /* Yaku.m */,
 			);
@@ -566,7 +565,6 @@
 				C06C939E14AC2C3500C9D372 /* AgariDetailTableViewController.m in Sources */,
 				C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */,
 				C05E1F081512596D00751EAA /* Yaku.m in Sources */,
-				C05E1F0E15126D6900751EAA /* Agari.m in Sources */,
 				340D9B991512C49500A904F6 /* MjAPIConnection.m in Sources */,
 				340D9BB61512C92400A904F6 /* NSObject+SBJson.m in Sources */,
 				340D9BB71512C92400A904F6 /* SBJsonParser.m in Sources */,
@@ -583,6 +581,7 @@
 				340D9BE61512E10E00A904F6 /* MjAgari.m in Sources */,
 				340D9BEF1513158100A904F6 /* NSData+Base64.m in Sources */,
 				34C2A28715160E390024C809 /* R9HTTPRequest.m in Sources */,
+				C084AAF4151741A3006EFBB1 /* Agari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,7 +618,6 @@
 				340D9BE11512DA6600A904F6 /* SBJsonWriter.h in Sources */,
 				340D9BE21512DA6600A904F6 /* SBJsonWriter.m in Sources */,
 				340D9BC81512D4EE00A904F6 /* Yaku.m in Sources */,
-				340D9BC71512D4A100A904F6 /* Agari.m in Sources */,
 				C0E9A423150F587C00A8AD81 /* MjTsumotterUnitTest.m in Sources */,
 				340D9BC41512CFDC00A904F6 /* AgariUnitTest.m in Sources */,
 				340D9BEA1513046000A904F6 /* MjAPIConnectionUnitTest.m in Sources */,
