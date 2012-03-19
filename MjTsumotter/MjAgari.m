@@ -51,26 +51,26 @@
 - (NSDictionary *)getSerializableDictionary
 {
     NSMutableDictionary *agari = [NSMutableDictionary dictionary];
+    NSArray *attributes = [NSArray arrayWithObjects:@"bakaze", @"jikaze",
+                           @"honba_num", @"dora_num", @"reach_num", @"is_tsumo", @"is_ippatsu",
+                           @"is_haitei", @"is_rinshan", @"is_chankan", @"is_tenho", @"is_chiho",
+                           @"is_parent", nil];
+    
+    for (NSString *attribute in attributes) {
+        id val = [self valueForKey:attribute];
+        if(val) {
+            if ([attribute hasPrefix:@"is_"]) {
+                NSNumber *num = val;
+                [agari setObject:[NSNumber numberWithBool:[num boolValue]] forKey:attribute];
+            } else {
+                [agari setObject:val forKey:attribute];                
+            }
+        }
+    }
+    
     if(self.img) {
         [agari setObject:[self.img base64EncodedString] forKey:@"img"];
     }
-    if(self.bakaze) {
-        [agari setObject:self.bakaze forKey:@"bakaze"];
-    }
-    if(self.jikaze) {
-        [agari setObject:self.jikaze forKey:@"jikaze"];
-    }
-    [agari setObject:[NSNumber numberWithInt:self.honba_num] forKey:@"honba_num"];
-    [agari setObject:[NSNumber numberWithInt:self.dora_num] forKey:@"dora_num"];
-    [agari setObject:[NSNumber numberWithInt:self.reach_num] forKey:@"reach_num"];
-    [agari setObject:[NSNumber numberWithBool:self.is_tsumo] forKey:@"is_tsumo"];
-    [agari setObject:[NSNumber numberWithBool:self.is_ippatsu] forKey:@"is_ippatsu"];
-    [agari setObject:[NSNumber numberWithBool:self.is_haitei] forKey:@"is_haitei"];
-    [agari setObject:[NSNumber numberWithBool:self.is_rinshan] forKey:@"is_rinshan"];
-    [agari setObject:[NSNumber numberWithBool:self.is_chankan] forKey:@"is_chankan"];
-    [agari setObject:[NSNumber numberWithBool:self.is_tenho] forKey:@"is_tenho"];
-    [agari setObject:[NSNumber numberWithBool:self.is_chiho] forKey:@"is_chiho"];
-    [agari setObject:[NSNumber numberWithBool:self.is_parent] forKey:@"is_parent"];
         
     NSDictionary *dictionary = [NSDictionary dictionaryWithObject:agari forKey:@"agari"];
     return dictionary;
@@ -81,6 +81,8 @@
     NSDictionary *d = [[self getSerializableDictionary] retain];
     NSString *json = [d JSONRepresentation];
     [d release];
+    
+    NSLog(@"json = %@", json);
     
     return json;
 }
@@ -106,6 +108,12 @@
     }
     
     return YES;
+}
+
+//override
+- (id)valueForUndefinedKey:(NSString *)key
+{
+    return nil;
 }
 
 @end

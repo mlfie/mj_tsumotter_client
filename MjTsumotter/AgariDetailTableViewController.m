@@ -7,6 +7,7 @@
 //
 
 #import "AgariDetailTableViewController.h"
+#import "TehaiView.h"
 
 // TableViewの位置、サイズを定義
 static const float  TABLE_VIEW_ORIGIN_X         = ZERO_VALUE_FLOAT;
@@ -150,7 +151,12 @@ static const float  TABLE_VIEW_SIZE_HEIGHT      = IPHONE_DEVICE_SIZE_HEIGHT - ST
             NSString *fileName  = [NSString stringWithFormat:@"sample%d", index_];
             NSString *imagePath = [[NSBundle mainBundle] pathForResource:fileName 
                                                                   ofType:kFileTypeJpeg];
-            cell.imageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            //cell.imageView.image = [UIImage imageWithContentsOfFile:imagePath];
+            
+            TehaiView *tehai = [[TehaiView alloc] initWithFrame:CGRectMake(0, 0, 280, 45)];
+            tehai.tehaiString = @"j1tj1tj1ts1ts2ts3tm4tm5tm6tp7tp8tp9tj5tj5t";
+            [cell.contentView addSubview:tehai];
+            
             break;
         case 1:
             if (cell == nil) {
