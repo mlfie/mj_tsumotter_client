@@ -84,7 +84,7 @@
 		C06C939514AB18BE00C9D372 /* ChartAnalyzeTableViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = C06C939414AB18BD00C9D372 /* ChartAnalyzeTableViewContoller.m */; };
 		C06C939B14AC1E0000C9D372 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C939A14AC1DFF00C9D372 /* QuartzCore.framework */; };
 		C06C939E14AC2C3500C9D372 /* AgariDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C06C939D14AC2C3500C9D372 /* AgariDetailTableViewController.m */; };
-		C084AAF4151741A3006EFBB1 /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C084AAF3151741A3006EFBB1 /* Agari.m */; };
+		C084AB0215175535006EFBB1 /* Agari.m in Sources */ = {isa = PBXBuildFile; fileRef = C084AB0115175535006EFBB1 /* Agari.m */; };
 		C0E9A418150F587C00A8AD81 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E9A40F150F520700A8AD81 /* SenTestingKit.framework */; };
 		C0E9A419150F587C00A8AD81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934314AB131100C9D372 /* UIKit.framework */; };
 		C0E9A41A150F587C00A8AD81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06C934514AB131100C9D372 /* Foundation.framework */; };
@@ -171,8 +171,8 @@
 		C06C939A14AC1DFF00C9D372 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C06C939C14AC2C3500C9D372 /* AgariDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgariDetailTableViewController.h; sourceTree = "<group>"; };
 		C06C939D14AC2C3500C9D372 /* AgariDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgariDetailTableViewController.m; sourceTree = "<group>"; };
-		C084AAF2151741A3006EFBB1 /* Agari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agari.h; sourceTree = "<group>"; };
-		C084AAF3151741A3006EFBB1 /* Agari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agari.m; sourceTree = "<group>"; };
+		C084AB0015175535006EFBB1 /* Agari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Agari.h; sourceTree = "<group>"; };
+		C084AB0115175535006EFBB1 /* Agari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Agari.m; sourceTree = "<group>"; };
 		C0E9A40F150F520700A8AD81 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C0E9A417150F587C00A8AD81 /* MjTsumotterUnitTest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MjTsumotterUnitTest.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E9A41D150F587C00A8AD81 /* MjTsumotterUnitTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MjTsumotterUnitTest-Info.plist"; sourceTree = "<group>"; };
@@ -285,10 +285,10 @@
 		C05E1F021512590500751EAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C084AAF2151741A3006EFBB1 /* Agari.h */,
-				C084AAF3151741A3006EFBB1 /* Agari.m */,
 				C05E1F061512596D00751EAA /* Yaku.h */,
 				C05E1F071512596D00751EAA /* Yaku.m */,
+				C084AB0015175535006EFBB1 /* Agari.h */,
+				C084AB0115175535006EFBB1 /* Agari.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -581,7 +581,7 @@
 				340D9BE61512E10E00A904F6 /* MjAgari.m in Sources */,
 				340D9BEF1513158100A904F6 /* NSData+Base64.m in Sources */,
 				34C2A28715160E390024C809 /* R9HTTPRequest.m in Sources */,
-				C084AAF4151741A3006EFBB1 /* Agari.m in Sources */,
+				C084AB0215175535006EFBB1 /* Agari.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

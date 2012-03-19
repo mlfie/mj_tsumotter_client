@@ -36,6 +36,6 @@
 @dynamic child_point;
 @dynamic parent_point;
 @dynamic ron_point;
-@dynamic yaku;
+@dynamic yakus;
 
 @end

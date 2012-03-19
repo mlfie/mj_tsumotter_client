@@ -37,14 +37,14 @@
 @property (nonatomic, retain) NSDecimalNumber * child_point;
 @property (nonatomic, retain) NSDecimalNumber * parent_point;
 @property (nonatomic, retain) NSDecimalNumber * ron_point;
-@property (nonatomic, retain) NSSet *yaku;
+@property (nonatomic, retain) NSSet *yakus;
 @end
 
 @interface Agari (CoreDataGeneratedAccessors)
 
-- (void)addYakuObject:(Yaku *)value;
-- (void)removeYakuObject:(Yaku *)value;
-- (void)addYaku:(NSSet *)values;
-- (void)removeYaku:(NSSet *)values;
+- (void)addYakusObject:(Yaku *)value;
+- (void)removeYakusObject:(Yaku *)value;
+- (void)addYakus:(NSSet *)values;
+- (void)removeYakus:(NSSet *)values;
 
 @end
