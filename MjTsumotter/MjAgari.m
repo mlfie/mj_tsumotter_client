@@ -81,9 +81,7 @@
     NSDictionary *d = [[self getSerializableDictionary] retain];
     NSString *json = [d JSONRepresentation];
     [d release];
-    
-    NSLog(@"json = %@", json);
-    
+        
     return json;
 }
 

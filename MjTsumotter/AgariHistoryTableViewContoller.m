@@ -8,6 +8,7 @@
 
 #import "AgariHistoryTableViewContoller.h"
 #import "MjTsumotterAppDelegate.h"
+#import "KyokuInfoViewController.h"
 
 // TableViewの位置、サイズを定義
 static const float  TABLE_VIEW_ORIGIN_X         = ZERO_VALUE_FLOAT;
@@ -83,7 +84,7 @@ static NSString     *kCellFormatPoint           = @"%6d点";
     [self.view addSubview:self.tableView];
 
 #ifdef ModeDebug
-    UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertAgariObject:)] autorelease];
+    UIBarButtonItem *addButton = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(startTakingPhoto:)] autorelease];
     self.navigationItem.rightBarButtonItem = addButton;
 #endif
 }
@@ -375,6 +376,20 @@ static NSString     *kCellFormatPoint           = @"%6d点";
     cell.detailTextLabel.text       = [NSString stringWithFormat:kCellFormatPoint, agari.total_point];
 
     cell.accessoryType              = UITableViewCellAccessoryDetailDisclosureButton;
+}
+
+- (void)startTakingPhoto:(id)sender
+{
+    MjAgari *agari = [[MjAgari alloc] init];
+    
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"temp" 
+                                           ofType:@"jpeg"];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+    NSData *imgData = UIImageJPEGRepresentation(image, 1.0);    
+    agari.img = imgData;
+    
+    KyokuInfoViewController *viewController = [[[KyokuInfoViewController alloc] initWithMjAgari:agari] autorelease];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)insertAgariObject:(id)sender

@@ -16,6 +16,9 @@ static const float  TABLE_VIEW_SIZE_WIDTH       = IPHONE_DEVICE_SIZE_WIDTH;
 static const float  TABLE_VIEW_SIZE_HEIGHT      = IPHONE_DEVICE_SIZE_HEIGHT - STATUS_BAR_SIZE_HEIGHT - NAVIGATION_BAR_SIZE_HEIGHT - TAB_BAR_SIZE_HEIGHT;
 
 @implementation AgariDetailTableViewController
+{
+    Agari *m_agari;
+}
 
 @synthesize tableView                   = _tableView;
 
@@ -25,6 +28,16 @@ static const float  TABLE_VIEW_SIZE_HEIGHT      = IPHONE_DEVICE_SIZE_HEIGHT - ST
     if (self != nil) {
         index_ = index_;
     }
+    return self;
+}
+
+- (id)initWithAgari:(Agari *)agari
+{
+    self = [super init];
+    if (self) {
+        m_agari = [agari retain];
+    }
+    
     return self;
 }
 
@@ -154,7 +167,7 @@ static const float  TABLE_VIEW_SIZE_HEIGHT      = IPHONE_DEVICE_SIZE_HEIGHT - ST
             //cell.imageView.image = [UIImage imageWithContentsOfFile:imagePath];
             
             TehaiView *tehai = [[TehaiView alloc] initWithFrame:CGRectMake(0, 0, 280, 45)];
-            tehai.tehaiString = @"j1tj1tj1ts1ts2ts3tm4tm5tm6tp7tp8tp9tj5tj5t";
+            tehai.tehaiString = m_agari.tehai_list;
             [cell.contentView addSubview:tehai];
             
             break;
@@ -279,6 +292,7 @@ static const float  TABLE_VIEW_SIZE_HEIGHT      = IPHONE_DEVICE_SIZE_HEIGHT - ST
 {
     [photoView_ release];
     [_tableView release];
+    [m_agari release];
     [super dealloc];
 }
 

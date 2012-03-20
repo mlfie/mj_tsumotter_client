@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Agari.h"
 
 @interface AgariDetailTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
@@ -18,5 +19,6 @@
 @property(nonatomic, readonly, retain)  UITableView                     *tableView;
 
 - (id)initWithIndex:(NSInteger)index;
+- (id)initWithAgari:(Agari *)agari;
 
 @end

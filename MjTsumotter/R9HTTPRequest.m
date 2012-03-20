@@ -63,7 +63,7 @@ static NSString *boundary = @"----------0xKhTmLbOuNdArY";
 {
     self = [super init];
     if (self) {
-        _url = targetUrl;
+        _url = [targetUrl retain];
         _timeoutSeconds = 0;
         _queue = [[NSOperationQueue alloc] init];
         _headers = [[NSMutableDictionary alloc] init];

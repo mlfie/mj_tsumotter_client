@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "MjAgari.h"
 
 @class Yaku;
 
@@ -46,5 +47,7 @@
 - (void)removeYakusObject:(Yaku *)value;
 - (void)addYakus:(NSSet *)values;
 - (void)removeYakus:(NSSet *)values;
+
+- (void)fromMjAgari:(MjAgari *)mjAgari;
 
 @end

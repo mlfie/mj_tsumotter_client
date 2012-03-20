@@ -9,7 +9,6 @@
 #import "Agari.h"
 #import "Yaku.h"
 
-
 @implementation Agari
 
 @dynamic bakaze;
@@ -37,5 +36,17 @@
 @dynamic parent_point;
 @dynamic ron_point;
 @dynamic yakus;
+
+- (void)fromMjAgari:(MjAgari *)mjAgari
+{
+    NSArray *attributes = [NSArray arrayWithObjects:@"bakaze", @"jikaze", @"honba_num",
+                           @"dora_num", @"reach_num", @"is_chankan", @"is_chiho", @"is_furo", @"is_haitei", @"is_ippatsu", @"is_parent",
+                           @"is_rinshan", @"is_tenho", @"is_tsumo", @"mangan_scale",
+                           @"tehai_list", @"total_fu_num", @"total_han_num", @"total_point", @"child_point", @"parent_point", @"ron_point", @"img", nil];
+    
+    for (NSString *attribute in attributes) {
+        [self setValue:[mjAgari valueForKey:attribute] forKey:attribute];
+    }
+}
 
 @end
