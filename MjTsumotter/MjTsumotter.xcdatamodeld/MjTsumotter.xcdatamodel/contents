@@ -34,7 +34,7 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Agari" positionX="-90" positionY="-306" width="128" height="420"/>
+        <element name="Agari" positionX="-90" positionY="-306" width="128" height="375"/>
         <element name="Yaku" positionX="162" positionY="-63" width="128" height="105"/>
     </elements>
 </model>

@@ -1,13 +1,13 @@
 //
 //  CommonDefines.h
-//  FaceTags
+//  MjTsumotter
 //
 //  Created by 寺師 佳彦 on 11/12/23.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#ifndef FaceTags_CommonDefines_h
-#define FaceTags_CommonDefines_h
+#ifndef MjTsumotter_CommonDefines_h
+#define MjTsumotter_CommonDefines_h
 
 #define ZERO_VALUE_INT                    0
 #define ZERO_VALUE_FLOAT                  0.0
@@ -29,6 +29,7 @@
 #define kDateFormatDateTime             @"yyyy/MM/dd HH:mm:ss"
 #define kDateFormatISO8601              @"yyyy-MM-dd'T'HH:mm:ss"
 #define kDateFormatExifDate             @"yyyy:MM:dd HH:mm:ss"
+#define kBaseDateFrom2012               @"2012/01/01 00:00:00"
 
 #define ModeDebug
 

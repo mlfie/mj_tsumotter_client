@@ -7,14 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 #import "AgariDetailTableViewController.h"
+#import "MjAgari.h"
+#import "Agari.h"
+#import "Yaku.h"
 
-@interface AgariHistoryTableViewContoller : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface AgariHistoryTableViewContoller : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 {
     UITableView                     *_tableView;
+    NSFetchedResultsController      *_fetchedResultsCtl;
     AgariDetailTableViewController  *detail_;
 }
 
 @property(nonatomic, readonly, retain)  UITableView                     *tableView;
+@property(nonatomic, readonly, retain)  NSFetchedResultsController      *fetchedResultsCtl;
+
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (void)insertAgariObject:(id)sender;
+- (void)insertOrUpdateAgari:(MjAgari *)mjAgari at:(NSDate *)date;
+- (Agari *)getAgariObjectAt:(NSDate *)date;
+- (Yaku *)getYakuObjectByName:(NSString *)name;
 
 @end
