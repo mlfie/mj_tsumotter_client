@@ -11,7 +11,10 @@
 
 @interface KyokuInfoViewController : UIViewController
 
+@property (nonatomic, retain)IBOutlet UIButton *submitButton;
 @property (nonatomic, retain) MjAgari *agari;
+
+- (IBAction)submitButtonDidPress:(id)sender;
 
 - (id)initWithMjAgari:(MjAgari *)agari;
 

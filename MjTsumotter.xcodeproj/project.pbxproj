@@ -57,6 +57,8 @@
 		340D9BF01513158100A904F6 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 340D9BEE1513158100A904F6 /* NSData+Base64.m */; };
 		340D9BF21513181C00A904F6 /* valid_sample.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 340D9BF11513167D00A904F6 /* valid_sample.jpeg */; };
 		3456701115185C70000EA80B /* temp.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3456701015185C70000EA80B /* temp.jpeg */; };
+		34567013151A1889000EA80B /* KyokuInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34567012151A1889000EA80B /* KyokuInfoViewController.xib */; };
+		34567014151A1889000EA80B /* KyokuInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34567012151A1889000EA80B /* KyokuInfoViewController.xib */; };
 		34804CDE151746E20045DD14 /* TehaiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34804CDD151746E20045DD14 /* TehaiView.m */; };
 		34804CDF151746E20045DD14 /* TehaiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34804CDD151746E20045DD14 /* TehaiView.m */; };
 		34804D7F151748A60045DD14 /* j1b.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34804CE2151748A50045DD14 /* j1b.gif */; };
@@ -448,6 +450,7 @@
 		340D9BEE1513158100A904F6 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		340D9BF11513167D00A904F6 /* valid_sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = valid_sample.jpeg; path = MjTsumotterUnitTest/valid_sample.jpeg; sourceTree = SOURCE_ROOT; };
 		3456701015185C70000EA80B /* temp.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp.jpeg; sourceTree = "<group>"; };
+		34567012151A1889000EA80B /* KyokuInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KyokuInfoViewController.xib; sourceTree = "<group>"; };
 		34804CDC151746E20045DD14 /* TehaiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TehaiView.h; sourceTree = "<group>"; };
 		34804CDD151746E20045DD14 /* TehaiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TehaiView.m; sourceTree = "<group>"; };
 		34804CE2151748A50045DD14 /* j1b.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = j1b.gif; sourceTree = "<group>"; };
@@ -931,6 +934,14 @@
 			name = R9HTTPRequest;
 			sourceTree = "<group>";
 		};
+		34C51D0F151A2F7E0009B1F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				34567012151A1889000EA80B /* KyokuInfoViewController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C05E1F021512590500751EAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,6 +988,7 @@
 		C06C934B14AB131100C9D372 /* MjTsumotter */ = {
 			isa = PBXGroup;
 			children = (
+				34C51D0F151A2F7E0009B1F3 /* Views */,
 				340D9B9A1512C90800A904F6 /* Externals */,
 				340D9B951512C45700A904F6 /* MjAPI */,
 				C05E1F021512590500751EAA /* Model */,
@@ -1331,6 +1343,7 @@
 				34804EB3151748A60045DD14 /* z0r.gif in Resources */,
 				34804EB5151748A60045DD14 /* z0t.gif in Resources */,
 				3456701115185C70000EA80B /* temp.jpeg in Resources */,
+				34567013151A1889000EA80B /* KyokuInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1496,6 +1509,7 @@
 				34804EB2151748A60045DD14 /* z0l.gif in Resources */,
 				34804EB4151748A60045DD14 /* z0r.gif in Resources */,
 				34804EB6151748A60045DD14 /* z0t.gif in Resources */,
+				34567014151A1889000EA80B /* KyokuInfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -388,7 +388,9 @@ static NSString     *kCellFormatPoint           = @"%6d点";
     NSData *imgData = UIImageJPEGRepresentation(image, 1.0);    
     agari.img = imgData;
     
-    KyokuInfoViewController *viewController = [[[KyokuInfoViewController alloc] initWithMjAgari:agari] autorelease];
+    KyokuInfoViewController *viewController = [[KyokuInfoViewController alloc] initWithNibName:@"KyokuInfoViewController" bundle:nil];
+    viewController.agari = agari;
+    
     [self.navigationController pushViewController:viewController animated:YES];
 }
 

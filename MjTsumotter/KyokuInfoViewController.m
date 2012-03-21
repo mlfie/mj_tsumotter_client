@@ -23,21 +23,11 @@
     MjAgari *agari;
 }
 
-@synthesize agari;
-
-- (id)initWithMjAgari:(MjAgari *)agari
-{
-    self = [super init];
-    if (self) {
-        self.agari = agari;
-    }
-    return self;
-}
+@synthesize agari, submitButton;
 
 - (void)dealloc
 {
     [self.agari release];
-    
     [super dealloc];
 }
 
@@ -45,14 +35,14 @@
 {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    
-    submitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    submitButton.frame = CGRectMake(0, 0, IPHONE_DEVICE_SIZE_WIDTH, 50);
-    [submitButton setTitle:@"送信する" forState:UIControlStateNormal];
-    [submitButton addTarget:self action:@selector(submitButtonDidPress:) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:submitButton];
+//    [self.view setBackgroundColor:[UIColor whiteColor]];
+//    
+//    submitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    submitButton.frame = CGRectMake(0, 0, IPHONE_DEVICE_SIZE_WIDTH, 50);
+//    [submitButton setTitle:@"送信する" forState:UIControlStateNormal];
+//    [submitButton addTarget:self action:@selector(submitButtonDidPress:) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self.view addSubview:submitButton];
 }
 
 - (void)viewDidUnload
@@ -66,7 +56,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (void)submitButtonDidPress:(id)sender
+- (IBAction)submitButtonDidPress:(id)sender
 {
     if (self.agari) {
         MjAPIConnection *con = [[[MjAPIConnection alloc] init] autorelease];
