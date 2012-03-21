@@ -35,14 +35,9 @@
 {
     [super viewDidLoad];
     
-//    [self.view setBackgroundColor:[UIColor whiteColor]];
-//    
-//    submitButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//    submitButton.frame = CGRectMake(0, 0, IPHONE_DEVICE_SIZE_WIDTH, 50);
-//    [submitButton setTitle:@"送信する" forState:UIControlStateNormal];
-//    [submitButton addTarget:self action:@selector(submitButtonDidPress:) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [self.view addSubview:submitButton];
+    UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithTitle:@"送る" style:UIBarButtonItemStylePlain target:self action:@selector(submitButtonDidPress:)];        
+    self.navigationItem.rightBarButtonItem = button;
+    [button release];
 }
 
 - (void)viewDidUnload
