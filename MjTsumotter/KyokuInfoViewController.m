@@ -19,11 +19,11 @@
 
 @implementation KyokuInfoViewController
 {
-    UIButton *submitButton;
+    UITableViewCell *is_tsumoCell;
     MjAgari *agari;
 }
 
-@synthesize agari, submitButton;
+@synthesize agari, is_tsumoCell;
 
 - (void)dealloc
 {
@@ -44,6 +44,35 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return is_tsumoCell.bounds.size.height;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"アガリ状況";
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0) {
+        return is_tsumoCell;
+    }
+    
+    return is_tsumoCell;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

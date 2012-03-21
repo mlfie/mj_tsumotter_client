@@ -9,12 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MjAgari.h"
 
-@interface KyokuInfoViewController : UIViewController
+@interface KyokuInfoViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, retain)IBOutlet UIButton *submitButton;
+@property (nonatomic, retain) IBOutlet UITableViewCell *is_tsumoCell;
+
 @property (nonatomic, retain) MjAgari *agari;
-
-- (IBAction)submitButtonDidPress:(id)sender;
 
 - (id)initWithMjAgari:(MjAgari *)agari;
 
