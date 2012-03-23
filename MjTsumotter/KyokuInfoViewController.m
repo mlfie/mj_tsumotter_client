@@ -19,11 +19,13 @@
 
 @implementation KyokuInfoViewController
 {
+    UITableViewCell *imgCell;
     UITableViewCell *is_tsumoCell;
+    UITableViewCell *jikazeCell;
     MjAgari *agari;
 }
 
-@synthesize agari, is_tsumoCell;
+@synthesize agari, imgCell, is_tsumoCell, jikazeCell;
 
 - (void)dealloc
 {
@@ -48,28 +50,74 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 0) {
+        return imgCell.bounds.size.height;
+    } else if (indexPath.section == 1) {
+        switch (indexPath.row) {
+            case 0:
+                return is_tsumoCell.bounds.size.height;
+                break;
+            case 1:
+                return jikazeCell.bounds.size.height;
+                break;                
+            default:
+                break;
+        }
+    }
+    
     return is_tsumoCell.bounds.size.height;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    switch (section) {
+        case 0:
+            return 1;
+            break;
+        case 1:
+            return 2;
+            break;            
+        default:
+            break;
+    }
+    return 0;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return @"アガリ状況";
+    switch (section) {
+        case 0:
+            return @"牌画像";
+            break;
+        case 1:
+            return @"アガリ状況";
+            break;            
+        default:
+            break;
+    }
+    return @"";
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{    
     if (indexPath.section == 0) {
-        return is_tsumoCell;
+        return imgCell;
+    } else if (indexPath.section == 1) {
+        switch (indexPath.row) {
+            case 0:
+                return is_tsumoCell;
+                break;
+            case 1:
+                return jikazeCell;
+                break;                
+            default:
+                break;
+        }
     }
     
     return is_tsumoCell;
@@ -118,6 +166,19 @@
 {    
     AgariDetailTableViewController *viewController = [[AgariDetailTableViewController alloc] initWithAgari:coreAgari];
     [self.navigationController pushViewController:viewController animated:YES];    
+}
+
+- (IBAction)is_tsumoChanged:(id)sender
+{
+    UISegmentedControl *control = (UISegmentedControl *)sender;
+    
+    if ([control selectedSegmentIndex] == 0) {
+        //"ron" is selected
+        self.agari.is_tsumo = NO;
+    } else {
+        //"tsumo" is selected
+        self.agari.is_tsumo = YES;
+    }    
 }
 
 @end

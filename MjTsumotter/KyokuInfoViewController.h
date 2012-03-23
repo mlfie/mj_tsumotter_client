@@ -11,9 +11,13 @@
 
 @interface KyokuInfoViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, retain) IBOutlet UITableViewCell *imgCell;
 @property (nonatomic, retain) IBOutlet UITableViewCell *is_tsumoCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *jikazeCell;
 
 @property (nonatomic, retain) MjAgari *agari;
+
+- (IBAction)is_tsumoChanged:(id)sender;
 
 - (id)initWithMjAgari:(MjAgari *)agari;
 

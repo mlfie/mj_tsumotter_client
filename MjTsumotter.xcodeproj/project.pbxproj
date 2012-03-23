@@ -375,6 +375,7 @@
 		34804EB6151748A60045DD14 /* z0t.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34804D7E151748A50045DD14 /* z0t.gif */; };
 		34C2A28715160E390024C809 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C2A28615160E390024C809 /* R9HTTPRequest.m */; };
 		34C2A28815160E390024C809 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C2A28615160E390024C809 /* R9HTTPRequest.m */; };
+		34D980BE151B84AD00CC702D /* AgariDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C06C939D14AC2C3500C9D372 /* AgariDetailTableViewController.m */; };
 		34DD616E1518443800A81856 /* KyokuInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DD616D1518443800A81856 /* KyokuInfoViewController.m */; };
 		34DD616F1518443800A81856 /* KyokuInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34DD616D1518443800A81856 /* KyokuInfoViewController.m */; };
 		C020BC04150DD619001E0725 /* TehaiCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020BC03150DD619001E0725 /* TehaiCameraViewController.m */; };
@@ -1573,6 +1574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D980BE151B84AD00CC702D /* AgariDetailTableViewController.m in Sources */,
 				340D9BEB1513048B00A904F6 /* MjAPIConnection.m in Sources */,
 				340D9BE71512E40A00A904F6 /* MjAgari.m in Sources */,
 				340D9BC91512DA6600A904F6 /* JSON.h in Sources */,
