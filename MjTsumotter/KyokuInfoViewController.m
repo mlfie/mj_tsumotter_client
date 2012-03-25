@@ -24,11 +24,13 @@
     UITableViewCell *is_tsumoCell;
     UITableViewCell *jikazeCell;
     UITableViewCell *bakazeCell;
+    UITableViewCell *doraNumCell;
+    UITableViewCell *honbaNumCell;
     MjAgari *agari;
     TableViewSetting *setting;
 }
 
-@synthesize agari, imgCell, is_tsumoCell, jikazeCell, bakazeCell;
+@synthesize agari, imgCell, is_tsumoCell, jikazeCell, bakazeCell, doraNumCell, honbaNumCell;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,6 +71,14 @@
         
         [section cell:^(Cell *cell) {
             cell.cellView = &bakazeCell;
+        }];
+        
+        [section cell:^(Cell *cell) {
+            cell.cellView = &doraNumCell;
+        }];
+        
+        [section cell:^(Cell *cell) {
+            cell.cellView = &honbaNumCell;
         }];
     }];
 }
