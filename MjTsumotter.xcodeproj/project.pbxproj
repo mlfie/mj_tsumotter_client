@@ -59,6 +59,8 @@
 		3456701115185C70000EA80B /* temp.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3456701015185C70000EA80B /* temp.jpeg */; };
 		34567013151A1889000EA80B /* KyokuInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34567012151A1889000EA80B /* KyokuInfoViewController.xib */; };
 		34567014151A1889000EA80B /* KyokuInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34567012151A1889000EA80B /* KyokuInfoViewController.xib */; };
+		347251EC151E38BC0013A580 /* TableViewSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 347251EB151E38BC0013A580 /* TableViewSetting.m */; };
+		347251ED151E38BC0013A580 /* TableViewSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 347251EB151E38BC0013A580 /* TableViewSetting.m */; };
 		34804CDE151746E20045DD14 /* TehaiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34804CDD151746E20045DD14 /* TehaiView.m */; };
 		34804CDF151746E20045DD14 /* TehaiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34804CDD151746E20045DD14 /* TehaiView.m */; };
 		34804D7F151748A60045DD14 /* j1b.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34804CE2151748A50045DD14 /* j1b.gif */; };
@@ -373,6 +375,7 @@
 		34804EB4151748A60045DD14 /* z0r.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34804D7D151748A50045DD14 /* z0r.gif */; };
 		34804EB5151748A60045DD14 /* z0t.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34804D7E151748A50045DD14 /* z0t.gif */; };
 		34804EB6151748A60045DD14 /* z0t.gif in Resources */ = {isa = PBXBuildFile; fileRef = 34804D7E151748A50045DD14 /* z0t.gif */; };
+		34B1FEED151EBC9100A618AB /* TableViewSettingUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B1FEEC151EBC9100A618AB /* TableViewSettingUnitTest.m */; };
 		34C2A28715160E390024C809 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C2A28615160E390024C809 /* R9HTTPRequest.m */; };
 		34C2A28815160E390024C809 /* R9HTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C2A28615160E390024C809 /* R9HTTPRequest.m */; };
 		34D980BE151B84AD00CC702D /* AgariDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C06C939D14AC2C3500C9D372 /* AgariDetailTableViewController.m */; };
@@ -452,6 +455,8 @@
 		340D9BF11513167D00A904F6 /* valid_sample.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = valid_sample.jpeg; path = MjTsumotterUnitTest/valid_sample.jpeg; sourceTree = SOURCE_ROOT; };
 		3456701015185C70000EA80B /* temp.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = temp.jpeg; sourceTree = "<group>"; };
 		34567012151A1889000EA80B /* KyokuInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KyokuInfoViewController.xib; sourceTree = "<group>"; };
+		347251EA151E38BC0013A580 /* TableViewSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSetting.h; sourceTree = "<group>"; };
+		347251EB151E38BC0013A580 /* TableViewSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSetting.m; sourceTree = "<group>"; };
 		34804CDC151746E20045DD14 /* TehaiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TehaiView.h; sourceTree = "<group>"; };
 		34804CDD151746E20045DD14 /* TehaiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TehaiView.m; sourceTree = "<group>"; };
 		34804CE2151748A50045DD14 /* j1b.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = j1b.gif; sourceTree = "<group>"; };
@@ -610,6 +615,8 @@
 		34804D7C151748A50045DD14 /* z0l.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = z0l.gif; sourceTree = "<group>"; };
 		34804D7D151748A50045DD14 /* z0r.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = z0r.gif; sourceTree = "<group>"; };
 		34804D7E151748A50045DD14 /* z0t.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = z0t.gif; sourceTree = "<group>"; };
+		34B1FEEB151EBC9100A618AB /* TableViewSettingUnitTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSettingUnitTest.h; sourceTree = "<group>"; };
+		34B1FEEC151EBC9100A618AB /* TableViewSettingUnitTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSettingUnitTest.m; sourceTree = "<group>"; };
 		34C2A28515160E390024C809 /* R9HTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R9HTTPRequest.h; sourceTree = "<group>"; };
 		34C2A28615160E390024C809 /* R9HTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R9HTTPRequest.m; sourceTree = "<group>"; };
 		34DD616C1518443800A81856 /* KyokuInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KyokuInfoViewController.h; sourceTree = "<group>"; };
@@ -753,6 +760,15 @@
 				340D9BEE1513158100A904F6 /* NSData+Base64.m */,
 			);
 			name = NSData_Base64;
+			sourceTree = "<group>";
+		};
+		347251E8151E387F0013A580 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				347251EA151E38BC0013A580 /* TableViewSetting.h */,
+				347251EB151E38BC0013A580 /* TableViewSetting.m */,
+			);
+			name = Libs;
 			sourceTree = "<group>";
 		};
 		34804CE1151748520045DD14 /* pais */ = {
@@ -989,6 +1005,7 @@
 		C06C934B14AB131100C9D372 /* MjTsumotter */ = {
 			isa = PBXGroup;
 			children = (
+				347251E8151E387F0013A580 /* Libs */,
 				34C51D0F151A2F7E0009B1F3 /* Views */,
 				340D9B9A1512C90800A904F6 /* Externals */,
 				340D9B951512C45700A904F6 /* MjAPI */,
@@ -1092,6 +1109,8 @@
 				340D9BC31512CFDC00A904F6 /* AgariUnitTest.m */,
 				340D9BE81513046000A904F6 /* MjAPIConnectionUnitTest.h */,
 				340D9BE91513046000A904F6 /* MjAPIConnectionUnitTest.m */,
+				34B1FEEB151EBC9100A618AB /* TableViewSettingUnitTest.h */,
+				34B1FEEC151EBC9100A618AB /* TableViewSettingUnitTest.m */,
 			);
 			path = MjTsumotterUnitTest;
 			sourceTree = "<group>";
@@ -1567,6 +1586,7 @@
 				34804CDE151746E20045DD14 /* TehaiView.m in Sources */,
 				C084AB0215175535006EFBB1 /* Agari.m in Sources */,
 				34DD616E1518443800A81856 /* KyokuInfoViewController.m in Sources */,
+				347251EC151E38BC0013A580 /* TableViewSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1611,6 +1631,8 @@
 				34C2A28815160E390024C809 /* R9HTTPRequest.m in Sources */,
 				34804CDF151746E20045DD14 /* TehaiView.m in Sources */,
 				34DD616F1518443800A81856 /* KyokuInfoViewController.m in Sources */,
+				347251ED151E38BC0013A580 /* TableViewSetting.m in Sources */,
+				34B1FEED151EBC9100A618AB /* TableViewSettingUnitTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
