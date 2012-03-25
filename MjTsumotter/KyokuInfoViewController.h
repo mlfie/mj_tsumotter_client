@@ -14,6 +14,7 @@
 @property (nonatomic, retain) IBOutlet UITableViewCell *imgCell;
 @property (nonatomic, retain) IBOutlet UITableViewCell *is_tsumoCell;
 @property (nonatomic, retain) IBOutlet UITableViewCell *jikazeCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *bakazeCell;
 
 @property (nonatomic, retain) MjAgari *agari;
 

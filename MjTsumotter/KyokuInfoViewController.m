@@ -23,11 +23,12 @@
     UITableViewCell *imgCell;
     UITableViewCell *is_tsumoCell;
     UITableViewCell *jikazeCell;
+    UITableViewCell *bakazeCell;
     MjAgari *agari;
     TableViewSetting *setting;
 }
 
-@synthesize agari, imgCell, is_tsumoCell, jikazeCell;
+@synthesize agari, imgCell, is_tsumoCell, jikazeCell, bakazeCell;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -64,6 +65,10 @@
         
         [section cell:^(Cell *cell) {
             cell.cellView = &jikazeCell;
+        }];
+        
+        [section cell:^(Cell *cell) {
+            cell.cellView = &bakazeCell;
         }];
     }];
 }
