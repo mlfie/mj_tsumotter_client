@@ -12,6 +12,7 @@
 #import "AgariDetailTableViewController.h"
 #import "MjAPIConnection.h"
 #import "Agari.h"
+#import "TableViewSetting.h"
 
 @interface KyokuInfoViewController ()
 
@@ -23,14 +24,48 @@
     UITableViewCell *is_tsumoCell;
     UITableViewCell *jikazeCell;
     MjAgari *agari;
+    TableViewSetting *setting;
 }
 
 @synthesize agari, imgCell, is_tsumoCell, jikazeCell;
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        setting = [[TableViewSetting alloc] init];
+        [self setUpTableViewSetting];
+    }
+    return self;
+}
+
 - (void)dealloc
 {
-    [self.agari release];
+    self.agari = nil;
+    [setting release];
+    
     [super dealloc];
+}
+
+- (void)setUpTableViewSetting
+{
+    [setting section:^(Section *section) {
+        section.title = @"牌画像";
+        [section cell:^(Cell *cell) {
+            cell.cellView = &imgCell;
+        }];
+    }];
+    
+    [setting section:^(Section *section) {
+        section.title = @"アガリ状況";
+        [section cell:^(Cell *cell) {
+            cell.cellView = &is_tsumoCell;
+        }];
+        
+        [section cell:^(Cell *cell) {
+            cell.cellView = &jikazeCell;
+        }];
+    }];
 }
 
 - (void)viewDidLoad
@@ -50,77 +85,27 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
-        return imgCell.bounds.size.height;
-    } else if (indexPath.section == 1) {
-        switch (indexPath.row) {
-            case 0:
-                return is_tsumoCell.bounds.size.height;
-                break;
-            case 1:
-                return jikazeCell.bounds.size.height;
-                break;                
-            default:
-                break;
-        }
-    }
-    
-    return is_tsumoCell.bounds.size.height;
+    return [setting getHeightOfSection:indexPath.section cell:indexPath.row];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return [setting sectionCount];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    switch (section) {
-        case 0:
-            return 1;
-            break;
-        case 1:
-            return 2;
-            break;            
-        default:
-            break;
-    }
-    return 0;
+    return [setting cellCountOfSection:section];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    switch (section) {
-        case 0:
-            return @"牌画像";
-            break;
-        case 1:
-            return @"アガリ状況";
-            break;            
-        default:
-            break;
-    }
-    return @"";
+    return [setting getTitleOfSection:section];
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
-    if (indexPath.section == 0) {
-        return imgCell;
-    } else if (indexPath.section == 1) {
-        switch (indexPath.row) {
-            case 0:
-                return is_tsumoCell;
-                break;
-            case 1:
-                return jikazeCell;
-                break;                
-            default:
-                break;
-        }
-    }
-    
-    return is_tsumoCell;
+    return [setting getCellViewOfSection:indexPath.section cell:indexPath.row];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
