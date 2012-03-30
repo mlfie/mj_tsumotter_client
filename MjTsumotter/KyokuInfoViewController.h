@@ -17,6 +17,13 @@
 @property (nonatomic, retain) IBOutlet UITableViewCell *bakazeCell;
 @property (nonatomic, retain) IBOutlet UITableViewCell *doraNumCell;
 @property (nonatomic, retain) IBOutlet UITableViewCell *honbaNumCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *reachCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *ippatsuCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *haiteiCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *rinshanCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *chankanCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *tenhoCell;
+@property (nonatomic, retain) IBOutlet UITableViewCell *chihoCell;
 
 @property (nonatomic, retain) MjAgari *agari;
 

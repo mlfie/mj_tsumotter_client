@@ -26,11 +26,19 @@
     UITableViewCell *bakazeCell;
     UITableViewCell *doraNumCell;
     UITableViewCell *honbaNumCell;
+    UITableViewCell *reachCell;
+    UITableViewCell *ippatsuCell;
+    UITableViewCell *haiteiCell;
+    UITableViewCell *rinshanCell;
+    UITableViewCell *chankanCell;
+    UITableViewCell *tenhoCell;
+    UITableViewCell *chihoCell;
+    
     MjAgari *agari;
     TableViewSetting *setting;
 }
 
-@synthesize agari, imgCell, is_tsumoCell, jikazeCell, bakazeCell, doraNumCell, honbaNumCell;
+@synthesize agari, imgCell, is_tsumoCell, jikazeCell, bakazeCell, doraNumCell, honbaNumCell, reachCell, ippatsuCell, haiteiCell, rinshanCell, chankanCell, tenhoCell, chihoCell;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,6 +87,31 @@
         
         [section cell:^(Cell *cell) {
             cell.cellView = &honbaNumCell;
+        }];
+    }];
+    
+    [setting section:^(Section *section) {
+        section.title = @"その他役";
+        [section cell:^(Cell *cell) {
+            cell.cellView = &reachCell;
+        }];
+        [section cell:^(Cell *cell) {
+            cell.cellView = &ippatsuCell;
+        }];
+        [section cell:^(Cell *cell) {
+            cell.cellView = &haiteiCell;
+        }];
+        [section cell:^(Cell *cell) {
+            cell.cellView = &rinshanCell;
+        }];
+        [section cell:^(Cell *cell) {
+            cell.cellView = &chankanCell;
+        }];
+        [section cell:^(Cell *cell) {
+            cell.cellView = &tenhoCell;
+        }];
+        [section cell:^(Cell *cell) {
+            cell.cellView = &chihoCell;
         }];
     }];
 }
