@@ -64,6 +64,11 @@
     return [[sections objectAtIndex:sectionIndex] getCellViewOfCell:cellIndex];
 }
 
+- (void)performSection:(int)sectionIndex cell:(int)cellIndex view:(UITableView *)view
+{
+    [[[sections objectAtIndex:sectionIndex] getCell:cellIndex] performView:view];
+}
+
 @end
 
 @implementation Section
@@ -116,11 +121,19 @@
     return [[cells objectAtIndex:cellIndex] getCellView];
 }
 
+- (Cell *)getCell:(int)cellIndex
+{
+    return [cells objectAtIndex:cellIndex];
+}
+
 @end
 
 @implementation Cell
 {
     UITableViewCell **cellView;
+    id touchedDelegate;
+    SEL touchedAction;
+    CellPerformHandler performHandler;
 }
 
 @synthesize cellView;
@@ -129,6 +142,7 @@
 - (void)dealloc
 {
     self.cellView = nil;
+    [performHandler release];
     
     [super dealloc];
 }
@@ -148,5 +162,19 @@
     }
     return 0;
 }
+
+- (void)setPerformHandler:(CellPerformHandler)handler
+{
+    performHandler = [handler copy];
+}
+
+- (void)performView:(UITableView *)view
+{
+    if (performHandler) {
+        performHandler(view);
+    }
+
+}
+
 
 @end

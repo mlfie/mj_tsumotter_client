@@ -617,7 +617,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="69346126">
 								<reference key="NSNextResponder" ref="1037177030"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 18}, {91, 33}}</string>
+								<string key="NSFrame">{{20, 18}, {111, 33}}</string>
 								<reference key="NSSuperview" ref="1037177030"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -633,9 +633,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<float key="IBUIMinimumFontSize">10</float>
 								<reference key="IBUIFontDescription" ref="1053931852"/>
 								<reference key="IBUIFont" ref="1032106100"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{280, 59}</string>
+						<string key="NSFrameSize">{300, 59}</string>
 						<reference key="NSSuperview" ref="306769993"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="69346126"/>
@@ -655,7 +656,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
-				<int key="IBUIAccessoryType">3</int>
 				<reference key="IBUIContentView" ref="1037177030"/>
 			</object>
 			<object class="IBUITableViewCell" id="54378482">
@@ -669,7 +669,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="653248710">
 								<reference key="NSNextResponder" ref="707641644"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 18}, {91, 33}}</string>
+								<string key="NSFrame">{{20, 18}, {111, 33}}</string>
 								<reference key="NSSuperview" ref="707641644"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -685,9 +685,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<float key="IBUIMinimumFontSize">10</float>
 								<reference key="IBUIFontDescription" ref="1053931852"/>
 								<reference key="IBUIFont" ref="1032106100"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{280, 59}</string>
+						<string key="NSFrameSize">{300, 59}</string>
 						<reference key="NSSuperview" ref="54378482"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="653248710"/>
@@ -707,7 +708,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
-				<int key="IBUIAccessoryType">3</int>
 				<reference key="IBUIContentView" ref="707641644"/>
 			</object>
 			<object class="IBUITableViewCell" id="445778703">
@@ -721,7 +721,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="501131911">
 								<reference key="NSNextResponder" ref="691191345"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 18}, {185, 33}}</string>
+								<string key="NSFrame">{{20, 18}, {212, 33}}</string>
 								<reference key="NSSuperview" ref="691191345"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -737,9 +737,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<float key="IBUIMinimumFontSize">10</float>
 								<reference key="IBUIFontDescription" ref="1053931852"/>
 								<reference key="IBUIFont" ref="1032106100"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{280, 59}</string>
+						<string key="NSFrameSize">{300, 59}</string>
 						<reference key="NSSuperview" ref="445778703"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="501131911"/>
@@ -759,7 +760,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
-				<int key="IBUIAccessoryType">3</int>
 				<reference key="IBUIContentView" ref="691191345"/>
 			</object>
 			<object class="IBUITableViewCell" id="212609500">
@@ -773,7 +773,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="531610509">
 								<reference key="NSNextResponder" ref="55244639"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 18}, {91, 33}}</string>
+								<string key="NSFrame">{{20, 18}, {142, 33}}</string>
 								<reference key="NSSuperview" ref="55244639"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -789,9 +789,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<float key="IBUIMinimumFontSize">10</float>
 								<reference key="IBUIFontDescription" ref="1053931852"/>
 								<reference key="IBUIFont" ref="1032106100"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{280, 59}</string>
+						<string key="NSFrameSize">{300, 59}</string>
 						<reference key="NSSuperview" ref="212609500"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="531610509"/>
@@ -811,7 +812,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
-				<int key="IBUIAccessoryType">3</int>
 				<reference key="IBUIContentView" ref="55244639"/>
 			</object>
 			<object class="IBUITableViewCell" id="1040132513">
@@ -825,7 +825,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="308967491">
 								<reference key="NSNextResponder" ref="316724403"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 18}, {91, 33}}</string>
+								<string key="NSFrame">{{20, 18}, {133, 33}}</string>
 								<reference key="NSSuperview" ref="316724403"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -841,9 +841,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<float key="IBUIMinimumFontSize">10</float>
 								<reference key="IBUIFontDescription" ref="1053931852"/>
 								<reference key="IBUIFont" ref="1032106100"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{280, 59}</string>
+						<string key="NSFrameSize">{300, 59}</string>
 						<reference key="NSSuperview" ref="1040132513"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="308967491"/>
@@ -863,7 +864,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
-				<int key="IBUIAccessoryType">3</int>
 				<reference key="IBUIContentView" ref="316724403"/>
 			</object>
 			<object class="IBUITableViewCell" id="876714295">
@@ -877,7 +877,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="186627378">
 								<reference key="NSNextResponder" ref="813333778"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 18}, {91, 33}}</string>
+								<string key="NSFrame">{{20, 18}, {111, 33}}</string>
 								<reference key="NSSuperview" ref="813333778"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -893,9 +893,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<float key="IBUIMinimumFontSize">10</float>
 								<reference key="IBUIFontDescription" ref="1053931852"/>
 								<reference key="IBUIFont" ref="1032106100"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{280, 59}</string>
+						<string key="NSFrameSize">{300, 59}</string>
 						<reference key="NSSuperview" ref="876714295"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="186627378"/>
@@ -915,7 +916,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
-				<int key="IBUIAccessoryType">3</int>
 				<reference key="IBUIContentView" ref="813333778"/>
 			</object>
 			<object class="IBUITableViewCell" id="42124725">
@@ -929,7 +929,7 @@ AAgACAAIAAEAAQABAAE</bytes>
 							<object class="IBUILabel" id="772052940">
 								<reference key="NSNextResponder" ref="199485816"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrame">{{20, 18}, {91, 33}}</string>
+								<string key="NSFrame">{{20, 18}, {111, 33}}</string>
 								<reference key="NSSuperview" ref="199485816"/>
 								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -945,9 +945,10 @@ AAgACAAIAAEAAQABAAE</bytes>
 								<float key="IBUIMinimumFontSize">10</float>
 								<reference key="IBUIFontDescription" ref="1053931852"/>
 								<reference key="IBUIFont" ref="1032106100"/>
+								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
 						</array>
-						<string key="NSFrameSize">{280, 59}</string>
+						<string key="NSFrameSize">{300, 59}</string>
 						<reference key="NSSuperview" ref="42124725"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="772052940"/>
@@ -967,7 +968,6 @@ AAgACAAIAAEAAQABAAE</bytes>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
-				<int key="IBUIAccessoryType">3</int>
 				<reference key="IBUIContentView" ref="199485816"/>
 			</object>
 		</array>
@@ -1109,6 +1109,24 @@ AAgACAAIAAEAAQABAAE</bytes>
 						<int key="IBEventType">13</int>
 					</object>
 					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">jikazeChanged:</string>
+						<reference key="source" ref="790932511"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">71</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">bakazeChanged:</string>
+						<reference key="source" ref="476545934"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">72</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1394,24 +1412,32 @@ AAgACAAIAAEAAQABAAE</bytes>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">69</int>
+			<int key="maxID">72</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">KyokuInfoViewController</string>
 					<string key="superclassName">UITableViewController</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">is_tsumoChanged:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">is_tsumoChanged:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="bakazeChanged:">id</string>
+						<string key="is_tsumoChanged:">id</string>
+						<string key="jikazeChanged:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="bakazeChanged:">
+							<string key="name">bakazeChanged:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="is_tsumoChanged:">
 							<string key="name">is_tsumoChanged:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="jikazeChanged:">
+							<string key="name">jikazeChanged:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="bakazeCell">UITableViewCell</string>
 						<string key="chankanCell">UITableViewCell</string>

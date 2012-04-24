@@ -28,6 +28,8 @@
 @property (nonatomic, retain) MjAgari *agari;
 
 - (IBAction)is_tsumoChanged:(id)sender;
+- (IBAction)jikazeChanged:(id)sender;
+- (IBAction)bakazeChanged:(id)sender;
 
 - (id)initWithMjAgari:(MjAgari *)agari;
 

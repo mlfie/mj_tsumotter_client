@@ -94,24 +94,102 @@
         section.title = @"その他役";
         [section cell:^(Cell *cell) {
             cell.cellView = &reachCell;
+            
+            [cell setPerformHandler:^(UITableView *view) {
+                
+                if (agari.reach_num == 0) {
+                    agari.reach_num = 1;
+                    reachCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                } else {
+                    agari.reach_num = 0;
+                    reachCell.accessoryType = UITableViewCellAccessoryNone;
+                }
+            }];
+            
         }];
+        
         [section cell:^(Cell *cell) {
             cell.cellView = &ippatsuCell;
+            
+            [cell setPerformHandler:^(UITableView *view) {                
+                if (agari.is_ippatsu) {
+                    agari.is_ippatsu = false;
+                    ippatsuCell.accessoryType = UITableViewCellAccessoryNone;
+                } else {
+                    agari.is_ippatsu = true;
+                    ippatsuCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+            }];
         }];
+        
         [section cell:^(Cell *cell) {
             cell.cellView = &haiteiCell;
+            
+            [cell setPerformHandler:^(UITableView *view) {                
+                if (agari.is_haitei) {
+                    agari.is_haitei = false;
+                    haiteiCell.accessoryType = UITableViewCellAccessoryNone;
+                } else {
+                    agari.is_haitei = true;
+                    haiteiCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+            }];
         }];
+        
         [section cell:^(Cell *cell) {
             cell.cellView = &rinshanCell;
+            
+            [cell setPerformHandler:^(UITableView *view) {                
+                if (agari.is_rinshan) {
+                    agari.is_rinshan = false;
+                    rinshanCell.accessoryType = UITableViewCellAccessoryNone;
+                } else {
+                    agari.is_rinshan = true;
+                    rinshanCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+            }];
         }];
+        
         [section cell:^(Cell *cell) {
             cell.cellView = &chankanCell;
+            
+            [cell setPerformHandler:^(UITableView *view) {                
+                if (agari.is_chankan) {
+                    agari.is_chankan = false;
+                    chankanCell.accessoryType = UITableViewCellAccessoryNone;
+                } else {
+                    agari.is_chankan = true;
+                    chankanCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+            }];
         }];
+        
         [section cell:^(Cell *cell) {
             cell.cellView = &tenhoCell;
+            
+            [cell setPerformHandler:^(UITableView *view) {                
+                if (agari.is_tenho) {
+                    agari.is_tenho = false;
+                    tenhoCell.accessoryType = UITableViewCellAccessoryNone;
+                } else {
+                    agari.is_tenho = true;
+                    tenhoCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+            }];
         }];
+        
         [section cell:^(Cell *cell) {
             cell.cellView = &chihoCell;
+            
+            [cell setPerformHandler:^(UITableView *view) {                
+                if (agari.is_chiho) {
+                    agari.is_chiho = false;
+                    chihoCell.accessoryType = UITableViewCellAccessoryNone;
+                } else {
+                    agari.is_chiho = true;
+                    chihoCell.accessoryType = UITableViewCellAccessoryCheckmark;
+                }
+            }];
         }];
     }];
 }
@@ -154,6 +232,11 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     return [setting getCellViewOfSection:indexPath.section cell:indexPath.row];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [setting performSection:indexPath.section cell:indexPath.row view:tableView];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -213,5 +296,50 @@
         self.agari.is_tsumo = YES;
     }    
 }
+
+- (IBAction)jikazeChanged:(id)sender
+{
+    UISegmentedControl *control = (UISegmentedControl *)sender;
+    
+    switch ([control selectedSegmentIndex]) {
+        case 0:
+            agari.jikaze = @"ton";
+            break;
+        case 1:
+            agari.jikaze = @"nan";
+            break;
+        case 2:
+            agari.jikaze = @"sha";
+            break;
+        case 3:
+            agari.jikaze = @"pei";
+            break;            
+        default:
+            break;
+    }
+}
+
+- (IBAction)bakazeChanged:(id)sender
+{
+    UISegmentedControl *control = (UISegmentedControl *)sender;
+    
+    switch ([control selectedSegmentIndex]) {
+        case 0:
+            agari.bakaze = @"ton";
+            break;
+        case 1:
+            agari.bakaze = @"nan";
+            break;
+        case 2:
+            agari.bakaze = @"sha";
+            break;
+        case 3:
+            agari.bakaze = @"pei";
+            break;            
+        default:
+            break;
+    }
+}
+
 
 @end
