@@ -38,7 +38,7 @@
     TableViewSetting *setting;
 }
 
-@synthesize agari, imgCell, is_tsumoCell, jikazeCell, bakazeCell, doraNumCell, honbaNumCell, reachCell, ippatsuCell, haiteiCell, rinshanCell, chankanCell, tenhoCell, chihoCell;
+@synthesize agari, imgCell, is_tsumoCell, jikazeCell, bakazeCell, doraNumCell, honbaNumCell, reachCell, ippatsuCell, haiteiCell, rinshanCell, chankanCell, tenhoCell, chihoCell, doraNumLabel, honbaNumLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -341,5 +341,19 @@
     }
 }
 
+- (IBAction)doraNumChanged:(id)sender
+{
+    UIStepper *stepper = (UIStepper *)sender;
+    
+    agari.dora_num = stepper.value;
+    doraNumLabel.text = [NSString stringWithFormat:@"%d", agari.dora_num];
+}
+
+- (IBAction)honbaNumChanged:(id)sender
+{
+    UIStepper *stepper = (UIStepper *)sender;
+    agari.honba_num = stepper.value;
+    honbaNumLabel.text = [NSString stringWithFormat:@"%d", agari.honba_num];
+}
 
 @end
