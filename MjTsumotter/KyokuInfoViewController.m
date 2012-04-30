@@ -247,18 +247,35 @@
 - (IBAction)submitButtonDidPress:(id)sender
 {
     if (self.agari) {
+        //[[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+        
         MjAPIConnection *con = [[[MjAPIConnection alloc] init] autorelease];
         [con sendAgari:self.agari withHandler:^(NSHTTPURLResponse *responseHeader, NSString *responseString, NSError *error) {
             NSLog(@"response = %@", responseString);
+            NSLog(@"error = %@", [error description]);
             
-            [self.agari fromJSON:responseString];
-            Agari *coreAgari = [self saveMjAgariToCoreData:self.agari];
-            
-            if (coreAgari) {
-                [self moveToAgariDetailTableViewWithCoreAgari:coreAgari];
+            if (error != nil) {
+                if ([self.agari fromJSON:responseString]) {
+                    Agari *coreAgari = [self saveMjAgariToCoreData:self.agari];
+                    
+                    if (coreAgari) {
+                        [self moveToAgariDetailTableViewWithCoreAgari:coreAgari];
+                    }                    
+                }
             }
+            
+            //error occures
+            [self showErrorAlertViewWithTitle:@"送信エラー" message:@"時間をおいて再度送信してください"];
+            
         }];        
     }
+}
+
+- (void)showErrorAlertViewWithTitle:(NSString *)title message:(NSString *)message
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alertView show];
+    [alertView release];
 }
 
 - (id)saveMjAgariToCoreData:(MjAgari *)mjAgari
